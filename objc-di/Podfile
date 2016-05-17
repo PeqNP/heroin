@@ -1,0 +1,6 @@
+workspace 'objc-di'
+
+target 'objc-di' do
+    pod 'Cedar'
+    pod 'KSDeferred'
+end

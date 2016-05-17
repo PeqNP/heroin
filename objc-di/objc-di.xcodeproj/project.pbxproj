@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074E0FC21CEBDED3005CC2F9 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FC11CEBDED3005CC2F9 /* Product.m */; };
+		074E0FC71CEBDFB3005CC2F9 /* ProductService.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FC61CEBDFB3005CC2F9 /* ProductService.m */; };
+		074E0FCB1CEBE042005CC2F9 /* MetricsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FCA1CEBE042005CC2F9 /* MetricsService.m */; };
+		074E0FCE1CEBE0C4005CC2F9 /* MainAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FCD1CEBE0C4005CC2F9 /* MainAssembly.m */; };
+		074E0FD21CEBE240005CC2F9 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */; };
 		07D72EBE1CEBDD100015080E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D72EBD1CEBDD100015080E /* main.m */; };
 		07D72EC11CEBDD100015080E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D72EC01CEBDD100015080E /* AppDelegate.m */; };
 		07D72EC41CEBDD100015080E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D72EC31CEBDD100015080E /* ViewController.m */; };
@@ -16,6 +21,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		074E0FC01CEBDED3005CC2F9 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = ProductDetails/Models/Product.h; sourceTree = "<group>"; };
+		074E0FC11CEBDED3005CC2F9 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = ProductDetails/Models/Product.m; sourceTree = "<group>"; };
+		074E0FC31CEBDEF4005CC2F9 /* di.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = di.h; path = App/di.h; sourceTree = "<group>"; };
+		074E0FC51CEBDFB3005CC2F9 /* ProductService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductService.h; path = ProductDetails/Services/ProductService.h; sourceTree = "<group>"; };
+		074E0FC61CEBDFB3005CC2F9 /* ProductService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductService.m; path = ProductDetails/Services/ProductService.m; sourceTree = "<group>"; };
+		074E0FC91CEBE042005CC2F9 /* MetricsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetricsService.h; path = App/Services/MetricsService.h; sourceTree = "<group>"; };
+		074E0FCA1CEBE042005CC2F9 /* MetricsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetricsService.m; path = App/Services/MetricsService.m; sourceTree = "<group>"; };
+		074E0FCC1CEBE0C4005CC2F9 /* MainAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainAssembly.h; path = App/Assemblies/MainAssembly.h; sourceTree = "<group>"; };
+		074E0FCD1CEBE0C4005CC2F9 /* MainAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainAssembly.m; path = App/Assemblies/MainAssembly.m; sourceTree = "<group>"; };
+		074E0FD01CEBE240005CC2F9 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPRequest.h; path = App/Utilities/HTTPRequest.h; sourceTree = "<group>"; };
+		074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPRequest.m; path = App/Utilities/HTTPRequest.m; sourceTree = "<group>"; };
 		07D72EB91CEBDD100015080E /* objc-di.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-di.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D72EBD1CEBDD100015080E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07D72EBF1CEBDD100015080E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +55,118 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		074E0FB61CEBDDB9005CC2F9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				074E0FBC1CEBDE37005CC2F9 /* Assemblies */,
+				074E0FC31CEBDEF4005CC2F9 /* di.h */,
+				074E0FBD1CEBDE87005CC2F9 /* Services */,
+				074E0FCF1CEBE226005CC2F9 /* Utilities */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		074E0FB71CEBDDCF005CC2F9 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				074E0FB81CEBDDE8005CC2F9 /* Assemblies */,
+				074E0FBF1CEBDEAD005CC2F9 /* Models */,
+				074E0FC41CEBDF83005CC2F9 /* Services */,
+			);
+			name = ProductDetails;
+			sourceTree = "<group>";
+		};
+		074E0FB81CEBDDE8005CC2F9 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assemblies;
+			sourceTree = "<group>";
+		};
+		074E0FB91CEBDDEF005CC2F9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				07D72EC21CEBDD100015080E /* ViewController.h */,
+				07D72EC31CEBDD100015080E /* ViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		074E0FBA1CEBDE03005CC2F9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				07D72EC51CEBDD100015080E /* Main.storyboard */,
+				07D72ECA1CEBDD110015080E /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		074E0FBB1CEBDE17005CC2F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07D72EC81CEBDD110015080E /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		074E0FBC1CEBDE37005CC2F9 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				074E0FCC1CEBE0C4005CC2F9 /* MainAssembly.h */,
+				074E0FCD1CEBE0C4005CC2F9 /* MainAssembly.m */,
+			);
+			name = Assemblies;
+			sourceTree = "<group>";
+		};
+		074E0FBD1CEBDE87005CC2F9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				074E0FC91CEBE042005CC2F9 /* MetricsService.h */,
+				074E0FCA1CEBE042005CC2F9 /* MetricsService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		074E0FBE1CEBDE94005CC2F9 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				07D72EBF1CEBDD100015080E /* AppDelegate.h */,
+				07D72EC01CEBDD100015080E /* AppDelegate.m */,
+				07D72ECD1CEBDD110015080E /* Info.plist */,
+				074E0FBB1CEBDE17005CC2F9 /* Resources */,
+				074E0FBA1CEBDE03005CC2F9 /* Storyboards */,
+				074E0FB91CEBDDEF005CC2F9 /* ViewControllers */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		074E0FBF1CEBDEAD005CC2F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				074E0FC01CEBDED3005CC2F9 /* Product.h */,
+				074E0FC11CEBDED3005CC2F9 /* Product.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		074E0FC41CEBDF83005CC2F9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				074E0FC51CEBDFB3005CC2F9 /* ProductService.h */,
+				074E0FC61CEBDFB3005CC2F9 /* ProductService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		074E0FCF1CEBE226005CC2F9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				074E0FD01CEBE240005CC2F9 /* HTTPRequest.h */,
+				074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		07D72EB01CEBDD100015080E = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +186,9 @@
 		07D72EBB1CEBDD100015080E /* objc-di */ = {
 			isa = PBXGroup;
 			children = (
-				07D72EBF1CEBDD100015080E /* AppDelegate.h */,
-				07D72EC01CEBDD100015080E /* AppDelegate.m */,
-				07D72EC21CEBDD100015080E /* ViewController.h */,
-				07D72EC31CEBDD100015080E /* ViewController.m */,
-				07D72EC51CEBDD100015080E /* Main.storyboard */,
-				07D72EC81CEBDD110015080E /* Assets.xcassets */,
-				07D72ECA1CEBDD110015080E /* LaunchScreen.storyboard */,
-				07D72ECD1CEBDD110015080E /* Info.plist */,
+				074E0FB61CEBDDB9005CC2F9 /* App */,
+				074E0FB71CEBDDCF005CC2F9 /* ProductDetails */,
+				074E0FBE1CEBDE94005CC2F9 /* main */,
 				07D72EBC1CEBDD100015080E /* Supporting Files */,
 			);
 			path = "objc-di";
@@ -150,6 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D72EC41CEBDD100015080E /* ViewController.m in Sources */,
+				074E0FD21CEBE240005CC2F9 /* HTTPRequest.m in Sources */,
+				074E0FC71CEBDFB3005CC2F9 /* ProductService.m in Sources */,
+				074E0FC21CEBDED3005CC2F9 /* Product.m in Sources */,
+				074E0FCB1CEBE042005CC2F9 /* MetricsService.m in Sources */,
+				074E0FCE1CEBE0C4005CC2F9 /* MainAssembly.m in Sources */,
 				07D72EC11CEBDD100015080E /* AppDelegate.m in Sources */,
 				07D72EBE1CEBDD100015080E /* main.m in Sources */,
 			);
@@ -302,6 +430,7 @@
 				07D72ED21CEBDD110015080E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
