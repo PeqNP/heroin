@@ -3,8 +3,8 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "KSPromise.h"
 
-@class KSPromise;
 @class Product;
 
 @interface ProductService : NSObject

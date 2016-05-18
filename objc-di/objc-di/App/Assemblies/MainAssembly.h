@@ -3,18 +3,16 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "DIAssembly.h"
 
 @class HTTPRequest;
 @class MetricsService;
 
-@interface MainAssembly : NSObject
+@interface MainAssembly : NSObject <DIAssembly>
 
 @property (nonatomic, strong, readonly) HTTPRequest *httpRequest;
 @property (nonatomic, strong, readonly) MetricsService *metricsService;
 
-+ (MainAssembly *)getInstance;
-
 - (instancetype)initWithConfiguration:(NSDictionary *)config;
-- (void)setInstance;
 
 @end
