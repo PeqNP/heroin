@@ -9,7 +9,7 @@
 @interface HTTPRequest : NSObject
 
 - (instancetype)initWithBaseUrl:(NSString *)baseUrl NS_DESIGNATED_INITIALIZER;
-- (KSPromise *)requestUrl:(NSURL *)url post:(NSDictionary *)post;
-- (KSPromise *)requestUrl:(NSURL *)url get:(NSDictionary *)get;
+- (KSPromise *)request:(NSString *)endpoint post:(NSDictionary *)post;
+- (KSPromise *)request:(NSString *)endpoint get:(NSDictionary *)get;
 
 @end

@@ -26,6 +26,10 @@
 		07D72EC71CEBDD100015080E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D72EC51CEBDD100015080E /* Main.storyboard */; };
 		07D72EC91CEBDD110015080E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D72EC81CEBDD110015080E /* Assets.xcassets */; };
 		07D72ECC1CEBDD110015080E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D72ECA1CEBDD110015080E /* LaunchScreen.storyboard */; };
+		07E672F41CECA4DC006233A6 /* ProductDetailsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E672F31CECA4DC006233A6 /* ProductDetailsAssembly.m */; };
+		07E672F51CECA4DC006233A6 /* ProductDetailsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E672F31CECA4DC006233A6 /* ProductDetailsAssembly.m */; };
+		07E672F91CECB353006233A6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E672F81CECB353006233A6 /* User.m */; };
+		07E672FA1CECB353006233A6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E672F81CECB353006233A6 /* User.m */; };
 		4195E6BAB9E99778541A671A /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 398E28708AFB6DDB27FB940E /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,10 @@
 		07D72EC81CEBDD110015080E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07D72ECB1CEBDD110015080E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D72ECD1CEBDD110015080E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07E672F21CECA4DC006233A6 /* ProductDetailsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDetailsAssembly.h; path = ProductDetails/Assemblies/ProductDetailsAssembly.h; sourceTree = "<group>"; };
+		07E672F31CECA4DC006233A6 /* ProductDetailsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDetailsAssembly.m; path = ProductDetails/Assemblies/ProductDetailsAssembly.m; sourceTree = "<group>"; };
+		07E672F71CECB353006233A6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = App/Models/User.h; sourceTree = "<group>"; };
+		07E672F81CECB353006233A6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = App/Models/User.m; sourceTree = "<group>"; };
 		07FCC9A737B3122BC3D36203 /* Pods-objc-di.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objc-di.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objc-di/Pods-objc-di.debug.xcconfig"; sourceTree = "<group>"; };
 		2E98F788F596F9E0CD3C89EE /* libPods-objc-di-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-objc-di-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398E28708AFB6DDB27FB940E /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +126,7 @@
 				074E0FC31CEBDEF4005CC2F9 /* di.h */,
 				07D3B4121CEC395300AFF33D /* DIAssembly.h */,
 				074E0FBC1CEBDE37005CC2F9 /* Assemblies */,
+				07E672F61CECB339006233A6 /* Models */,
 				074E0FBD1CEBDE87005CC2F9 /* Services */,
 				074E0FCF1CEBE226005CC2F9 /* Utilities */,
 			);
@@ -138,6 +147,8 @@
 		074E0FB81CEBDDE8005CC2F9 /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
+				07E672F21CECA4DC006233A6 /* ProductDetailsAssembly.h */,
+				07E672F31CECA4DC006233A6 /* ProductDetailsAssembly.m */,
 			);
 			name = Assemblies;
 			sourceTree = "<group>";
@@ -263,6 +274,15 @@
 				07D72EBD1CEBDD100015080E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07E672F61CECB339006233A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07E672F71CECB353006233A6 /* User.h */,
+				07E672F81CECB353006233A6 /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		F4547B8425304249901095C2 /* Frameworks */ = {
@@ -487,6 +507,8 @@
 			files = (
 				07D3B40F1CEC385700AFF33D /* MainAssembly.m in Sources */,
 				07D3B40D1CEC384B00AFF33D /* ProductService.m in Sources */,
+				07E672FA1CECB353006233A6 /* User.m in Sources */,
+				07E672F51CECA4DC006233A6 /* ProductDetailsAssembly.m in Sources */,
 				07D3B40E1CEC384F00AFF33D /* Product.m in Sources */,
 				07D3B4101CEC385C00AFF33D /* MetricsService.m in Sources */,
 				070908F61CEC3777008B56AC /* ProductServiceSpec.mm in Sources */,
@@ -499,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E672F91CECB353006233A6 /* User.m in Sources */,
 				07D72EC41CEBDD100015080E /* ViewController.m in Sources */,
 				074E0FD21CEBE240005CC2F9 /* HTTPRequest.m in Sources */,
 				074E0FC71CEBDFB3005CC2F9 /* ProductService.m in Sources */,
@@ -507,6 +530,7 @@
 				074E0FCE1CEBE0C4005CC2F9 /* MainAssembly.m in Sources */,
 				07D72EC11CEBDD100015080E /* AppDelegate.m in Sources */,
 				07D72EBE1CEBDD100015080E /* main.m in Sources */,
+				07E672F41CECA4DC006233A6 /* ProductDetailsAssembly.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
