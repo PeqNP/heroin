@@ -8,7 +8,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[[MainAssembly alloc] initWithConfiguration:@{
         @"http-base-url": @"https://secure-api.example.com",
