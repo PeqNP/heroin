@@ -25,7 +25,7 @@ describe(@"ProductService", ^{
     
     describe(@"fetch a product", ^{
         subjectAction(^{
-            subject promise
+            
         });
         
         it(@"should have sent a metric", ^{

@@ -28,12 +28,12 @@
 
 /** Cedar test convenience macros. TODO: These can live somewhere else. */
 #define di_fake_assembly(ASSEMBLY_NAME) \
-{ \
+({ \
     ASSEMBLY_NAME *inst = nice_fake_for([ASSEMBLY_NAME class]); \
     spy_on([ASSEMBLY_NAME class]); \
     [ASSEMBLY_NAME class] stub_method(@selector(getInstance)).and_return(inst); \
     inst; \
-}
+})
 
 #define di_unfake_assembly(ASSEMBLY_NAME) \
 stop_spying_on([ASSEMBLY_NAME class]);
