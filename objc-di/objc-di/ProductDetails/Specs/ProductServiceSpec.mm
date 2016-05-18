@@ -28,6 +28,11 @@ describe(@"ProductService", ^{
         subject = [[ProductService alloc] init];
     });
     
+    afterEach(^{
+        // TODO: Remove.
+        di_unfake_assembly(MainAssembly);
+    });
+    
     describe(@"fetch a product", ^{
         __block KSDeferred *deferred;
         __block NSError *error;
@@ -38,7 +43,7 @@ describe(@"ProductService", ^{
             error = nil;
             
             deferred = [KSDeferred defer];
-            httpRequest stub_method(@selector(requestUrl:post:)).and_return(deferred.promise);
+            httpRequest stub_method(@selector(request:post:)).and_return(deferred.promise);
         });
         
         subjectAction(^{

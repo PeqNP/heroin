@@ -14,18 +14,6 @@
     return [[ASSEMBLY_NAME getInstance] PROPERTY_NAME]; \
 }
 
-/** Inject a new instance of a dependency into the dependent instance. */
-#define di_property_instance(PROPERTY_TYPE, PROPERTY_NAME) \
-@property (nonatomic, strong) PROPERTY_TYPE *PROPERTY_NAME;
-
-#define di_inject_instance(ASSEMBLY_NAME, PROPERTY_TYPE, PROPERTY_NAME) \
-- (PROPERTY_TYPE *)PROPERTY_NAME { \
-    if (!_##PROPERTY_NAME) { \
-        _##PROPERTY_NAME = [[ASSEMBLY_NAME getInstance] PROPERTY_NAME]; \
-    } \
-    return _##PROPERTY_NAME; \
-}
-
 /** Cedar test convenience macros. TODO: These can live somewhere else. */
 #define di_fake_assembly(ASSEMBLY_NAME) \
 ({ \
