@@ -5,6 +5,7 @@
 #import "AppDelegate.h"
 #import "MainAssembly.h"
 #import "ProductDetailsAssembly.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
@@ -13,7 +14,10 @@
         @"http-base-url": @"https://secure-api.example.com",
         @"metrics-api-key": @"1234abcd"
     }] setInstance];
-    [[[ProductDetailsAssembly alloc] init] setInstance];
+    
+    self.window.rootViewController = [[UIViewController alloc] init];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

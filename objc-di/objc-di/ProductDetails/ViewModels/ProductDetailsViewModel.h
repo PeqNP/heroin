@@ -3,10 +3,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "DIAssembly.h"
 
-@class UIViewController;
-
-@interface ProductDetailsAssembly : NSObject <DIAssembly>
+@interface ProductDetailsViewModel : NSObject
 
 @end

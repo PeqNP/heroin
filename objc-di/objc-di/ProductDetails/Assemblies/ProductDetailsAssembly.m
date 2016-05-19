@@ -17,11 +17,6 @@ static ProductDetailsAssembly *sInstance;
 
 di_inject(MainAssembly, MetricsService, metricsService)
 
-- (UIViewController *)productDetailsControllerWithProductId:(NSString *)productId {
-    [self.metricsService logEvent:@"Creating: ProductDetailsController"];
-    return nil;
-}
-
 #pragma mark - DIAssembly
 
 + (instancetype)getInstance {

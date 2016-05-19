@@ -2,10 +2,8 @@
  Copyright (c) 2016 Upstart Illustration LLC. All rights reserved.
  */
 
-#import <UIKit/UIKit.h>
+#import "ProductDetailsViewModel.h"
 
-@interface ViewController : UIViewController
-
+@implementation ProductDetailsViewModel
 
 @end
-

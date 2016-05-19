@@ -17,7 +17,6 @@ static MainAssembly *sInstance;
 
 @implementation MainAssembly
 
-
 - (instancetype)initWithConfiguration:(NSDictionary *)config {
     self = [super init];
     if (self) {
