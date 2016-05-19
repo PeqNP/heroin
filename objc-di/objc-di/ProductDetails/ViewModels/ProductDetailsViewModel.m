@@ -3,6 +3,13 @@
  */
 
 #import "ProductDetailsViewModel.h"
+#import "di.h"
+#import "ProductDetailsAssembly.h"
+#import "ProductDetailsDomain.h"
+
+@interface ProductDetailsViewModel ()
+@property (nonatomic, strong) ProductDetailsDomain *productDetailsDomain;
+@end
 
 @implementation ProductDetailsViewModel
 

@@ -13,6 +13,7 @@
 @class Product;
 @class ReservationConfirmation;
 @class SKU;
+@class SuggestedProduct;
 @class UIImage;
 
 @interface ProductDetailsDomain : NSObject
@@ -23,7 +24,7 @@
 
 - (KSPromise<NSArray<UIImage *> *> *)getProductImages;
 - (KSPromise<NSArray<CustomerReview *> *> *)getCustomerReviews;
-- (KSPromise<NSArray<Product *> *> *)getSuggestedProducts;
+- (KSPromise<NSArray<SuggestedProduct *> *> *)getSuggestedProducts;
 
 /** By default, the amount to purchase is 1. */
 - (void)setAmount:(NSInteger)amount;
@@ -31,7 +32,7 @@
 /** Sets error if SKU is unavailable, etc. */
 - (BOOL)selectSku:(SKU *)sku error:(NSError *)error;
 
-- (KSPromise *)addToCart;
+- (KSPromise *)addToShoppingCart;
 - (KSPromise<ReservationConfirmation *> *)reseveForPickup;
 
 @end
