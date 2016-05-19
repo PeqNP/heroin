@@ -3,19 +3,33 @@
  */
 
 #import "ProductDetailsAssembly.h"
-#import "MainAssembly.h"
-#import "MetricsService.h"
 #import "di.h"
+#import "ProductService.h"
 
 @interface ProductDetailsAssembly ()
-di_property(MetricsService, metricsService)
+@property (nonatomic, strong) ProductService *productService;
+@property (nonatomic, strong) ProductDetailsDomain *productDetailsDomain;
 @end
 
 static ProductDetailsAssembly *sInstance;
 
 @implementation ProductDetailsAssembly
 
-di_inject(MainAssembly, MetricsService, metricsService)
+- (instancetype)init {
+    [self doesNotRecognizeSelector:_cmd];
+    return [self initWithProductDetailsDomain:nil];
+}
+
+- (instancetype)initWithProductDetailsDomain:(ProductDetailsDomain *)productDetailsDomain {
+    self = [super init];
+    if (self) {
+        _productDetailsDomain = productDetailsDomain;
+        _productService = [[ProductService alloc] init];
+    }
+    return self;
+}
+
+#pragma mark - Assemblies
 
 #pragma mark - DIAssembly
 

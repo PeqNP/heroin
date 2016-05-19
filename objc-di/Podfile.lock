@@ -1,0 +1,13 @@
+PODS:
+  - Cedar (1.0)
+  - KSDeferred (0.3.1)
+
+DEPENDENCIES:
+  - Cedar
+  - KSDeferred
+
+SPEC CHECKSUMS:
+  Cedar: a641e5ed0353bd9d45782ce365d0822b7342cce3
+  KSDeferred: 45c9bd1dcf4ece146ea23bd8d9605c41e19458b1
+
+COCOAPODS: 0.39.0

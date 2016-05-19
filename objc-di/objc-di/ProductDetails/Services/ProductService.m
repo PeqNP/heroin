@@ -22,7 +22,7 @@ di_inject(MainAssembly, HTTPRequest, httpRequest)
 - (KSPromise<Product *> *)promiseForProductWithId:(NSString *)productId {
     [self.metricsService logEvent:@"RequestedProduct"];
     return [[self.httpRequest request:@"/product" post:@{@"id": productId}] then:^Product *(NSDictionary *response) {
-        return [Product productFromDictionary:response];
+        return [Product fromDictionary:response];
     } error:^id(NSError *error) {
         return error;
     }];

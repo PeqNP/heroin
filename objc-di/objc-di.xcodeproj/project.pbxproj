@@ -12,6 +12,20 @@
 		070F3ED71CEE098300574D27 /* ProductDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3ED61CEE098300574D27 /* ProductDetailsViewModel.m */; };
 		070F3ED81CEE098300574D27 /* ProductDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3ED61CEE098300574D27 /* ProductDetailsViewModel.m */; };
 		070F3EDD1CEE0AA200574D27 /* ProductDetailsViewModelSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EDC1CEE0AA200574D27 /* ProductDetailsViewModelSpec.mm */; };
+		070F3EE11CEE0D3300574D27 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EE01CEE0D3300574D27 /* ProductDetailsViewController.m */; };
+		070F3EE21CEE0D3300574D27 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EE01CEE0D3300574D27 /* ProductDetailsViewController.m */; };
+		070F3EE61CEE373A00574D27 /* ProductDetailsDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EE51CEE373A00574D27 /* ProductDetailsDomain.m */; };
+		070F3EE71CEE373A00574D27 /* ProductDetailsDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EE51CEE373A00574D27 /* ProductDetailsDomain.m */; };
+		070F3EEA1CEE386400574D27 /* SKU.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EE91CEE386400574D27 /* SKU.m */; };
+		070F3EEB1CEE386400574D27 /* SKU.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EE91CEE386400574D27 /* SKU.m */; };
+		070F3EF21CEE3AC100574D27 /* ReservationConfirmation.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EF11CEE3AC100574D27 /* ReservationConfirmation.m */; };
+		070F3EF31CEE3AC100574D27 /* ReservationConfirmation.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EF11CEE3AC100574D27 /* ReservationConfirmation.m */; };
+		070F3EF61CEE406000574D27 /* CustomerReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EF51CEE406000574D27 /* CustomerReview.m */; };
+		070F3EF71CEE406000574D27 /* CustomerReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EF51CEE406000574D27 /* CustomerReview.m */; };
+		070F3F001CEE44D200574D27 /* ShoppingCartService.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EFF1CEE44D200574D27 /* ShoppingCartService.m */; };
+		070F3F011CEE44D200574D27 /* ShoppingCartService.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3EFF1CEE44D200574D27 /* ShoppingCartService.m */; };
+		070F3F051CEE450F00574D27 /* ShoppingCartAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F041CEE450F00574D27 /* ShoppingCartAssembly.m */; };
+		070F3F061CEE450F00574D27 /* ShoppingCartAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F041CEE450F00574D27 /* ShoppingCartAssembly.m */; };
 		0739CABD1CEC372F006FDB07 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0739CABC1CEC372F006FDB07 /* Specs.m */; };
 		074E0FC21CEBDED3005CC2F9 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FC11CEBDED3005CC2F9 /* Product.m */; };
 		074E0FC71CEBDFB3005CC2F9 /* ProductService.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FC61CEBDFB3005CC2F9 /* ProductService.m */; };
@@ -25,7 +39,6 @@
 		07D3B4111CEC386000AFF33D /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */; };
 		07D72EBE1CEBDD100015080E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D72EBD1CEBDD100015080E /* main.m */; };
 		07D72EC11CEBDD100015080E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D72EC01CEBDD100015080E /* AppDelegate.m */; };
-		07D72EC41CEBDD100015080E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D72EC31CEBDD100015080E /* ViewController.m */; };
 		07D72EC91CEBDD110015080E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D72EC81CEBDD110015080E /* Assets.xcassets */; };
 		07D72ECC1CEBDD110015080E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D72ECA1CEBDD110015080E /* LaunchScreen.storyboard */; };
 		07E672F41CECA4DC006233A6 /* ProductDetailsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E672F31CECA4DC006233A6 /* ProductDetailsAssembly.m */; };
@@ -49,6 +62,20 @@
 		070F3ED51CEE098300574D27 /* ProductDetailsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDetailsViewModel.h; path = ProductDetails/ViewModels/ProductDetailsViewModel.h; sourceTree = "<group>"; };
 		070F3ED61CEE098300574D27 /* ProductDetailsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDetailsViewModel.m; path = ProductDetails/ViewModels/ProductDetailsViewModel.m; sourceTree = "<group>"; };
 		070F3EDC1CEE0AA200574D27 /* ProductDetailsViewModelSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ProductDetailsViewModelSpec.mm; path = ProductDetails/Specs/ProductDetailsViewModelSpec.mm; sourceTree = "<group>"; };
+		070F3EDF1CEE0D3300574D27 /* ProductDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDetailsViewController.h; path = ProductDetails/ViewControllers/ProductDetailsViewController.h; sourceTree = "<group>"; };
+		070F3EE01CEE0D3300574D27 /* ProductDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDetailsViewController.m; path = ProductDetails/ViewControllers/ProductDetailsViewController.m; sourceTree = "<group>"; };
+		070F3EE41CEE373A00574D27 /* ProductDetailsDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDetailsDomain.h; path = ProductDetails/Domains/ProductDetailsDomain.h; sourceTree = "<group>"; };
+		070F3EE51CEE373A00574D27 /* ProductDetailsDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDetailsDomain.m; path = ProductDetails/Domains/ProductDetailsDomain.m; sourceTree = "<group>"; };
+		070F3EE81CEE386400574D27 /* SKU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKU.h; path = ProductDetails/Models/SKU.h; sourceTree = "<group>"; };
+		070F3EE91CEE386400574D27 /* SKU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKU.m; path = ProductDetails/Models/SKU.m; sourceTree = "<group>"; };
+		070F3EF01CEE3AC100574D27 /* ReservationConfirmation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReservationConfirmation.h; path = ProductDetails/Models/ReservationConfirmation.h; sourceTree = "<group>"; };
+		070F3EF11CEE3AC100574D27 /* ReservationConfirmation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReservationConfirmation.m; path = ProductDetails/Models/ReservationConfirmation.m; sourceTree = "<group>"; };
+		070F3EF41CEE406000574D27 /* CustomerReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomerReview.h; path = ProductDetails/Models/CustomerReview.h; sourceTree = "<group>"; };
+		070F3EF51CEE406000574D27 /* CustomerReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomerReview.m; path = ProductDetails/Models/CustomerReview.m; sourceTree = "<group>"; };
+		070F3EFE1CEE44D200574D27 /* ShoppingCartService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShoppingCartService.h; path = ShoppingCart/Services/ShoppingCartService.h; sourceTree = "<group>"; };
+		070F3EFF1CEE44D200574D27 /* ShoppingCartService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShoppingCartService.m; path = ShoppingCart/Services/ShoppingCartService.m; sourceTree = "<group>"; };
+		070F3F031CEE450F00574D27 /* ShoppingCartAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShoppingCartAssembly.h; path = ShoppingCart/Assemblies/ShoppingCartAssembly.h; sourceTree = "<group>"; };
+		070F3F041CEE450F00574D27 /* ShoppingCartAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShoppingCartAssembly.m; path = ShoppingCart/Assemblies/ShoppingCartAssembly.m; sourceTree = "<group>"; };
 		0739CAB41CEC36F8006FDB07 /* ProductServiceSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ProductServiceSpec.mm; path = ProductDetails/Specs/ProductServiceSpec.mm; sourceTree = "<group>"; };
 		0739CABA1CEC372F006FDB07 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0739CABC1CEC372F006FDB07 /* Specs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
@@ -69,8 +96,6 @@
 		07D72EBD1CEBDD100015080E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07D72EBF1CEBDD100015080E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07D72EC01CEBDD100015080E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		07D72EC21CEBDD100015080E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		07D72EC31CEBDD100015080E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		07D72EC81CEBDD110015080E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07D72ECB1CEBDD110015080E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D72ECD1CEBDD110015080E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,8 +144,46 @@
 		070F3EDE1CEE0C2100574D27 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				070F3EDF1CEE0D3300574D27 /* ProductDetailsViewController.h */,
+				070F3EE01CEE0D3300574D27 /* ProductDetailsViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		070F3EE31CEE371A00574D27 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				070F3EE41CEE373A00574D27 /* ProductDetailsDomain.h */,
+				070F3EE51CEE373A00574D27 /* ProductDetailsDomain.m */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		070F3EFC1CEE448E00574D27 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				070F3F021CEE44EB00574D27 /* Assemblies */,
+				070F3EFD1CEE449F00574D27 /* Services */,
+			);
+			name = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		070F3EFD1CEE449F00574D27 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				070F3EFE1CEE44D200574D27 /* ShoppingCartService.h */,
+				070F3EFF1CEE44D200574D27 /* ShoppingCartService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		070F3F021CEE44EB00574D27 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				070F3F031CEE450F00574D27 /* ShoppingCartAssembly.h */,
+				070F3F041CEE450F00574D27 /* ShoppingCartAssembly.m */,
+			);
+			name = Assemblies;
 			sourceTree = "<group>";
 		};
 		0739CAB31CEC36CE006FDB07 /* Specs */ = {
@@ -157,6 +220,7 @@
 		074E0FB71CEBDDCF005CC2F9 /* ProductDetails */ = {
 			isa = PBXGroup;
 			children = (
+				070F3EE31CEE371A00574D27 /* Domain */,
 				074E0FB81CEBDDE8005CC2F9 /* Assemblies */,
 				074E0FBF1CEBDEAD005CC2F9 /* Models */,
 				074E0FC41CEBDF83005CC2F9 /* Services */,
@@ -179,8 +243,6 @@
 		074E0FB91CEBDDEF005CC2F9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				07D72EC21CEBDD100015080E /* ViewController.h */,
-				07D72EC31CEBDD100015080E /* ViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -235,8 +297,14 @@
 		074E0FBF1CEBDEAD005CC2F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				070F3EF41CEE406000574D27 /* CustomerReview.h */,
+				070F3EF51CEE406000574D27 /* CustomerReview.m */,
 				074E0FC01CEBDED3005CC2F9 /* Product.h */,
 				074E0FC11CEBDED3005CC2F9 /* Product.m */,
+				070F3EF01CEE3AC100574D27 /* ReservationConfirmation.h */,
+				070F3EF11CEE3AC100574D27 /* ReservationConfirmation.m */,
+				070F3EE81CEE386400574D27 /* SKU.h */,
+				070F3EE91CEE386400574D27 /* SKU.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -284,6 +352,7 @@
 			children = (
 				074E0FB61CEBDDB9005CC2F9 /* App */,
 				074E0FB71CEBDDCF005CC2F9 /* ProductDetails */,
+				070F3EFC1CEE448E00574D27 /* ShoppingCart */,
 				074E0FBE1CEBDE94005CC2F9 /* main */,
 				07D72EBC1CEBDD100015080E /* Supporting Files */,
 			);
@@ -529,14 +598,21 @@
 				07D3B40F1CEC385700AFF33D /* MainAssembly.m in Sources */,
 				070F3EDD1CEE0AA200574D27 /* ProductDetailsViewModelSpec.mm in Sources */,
 				07D3B40D1CEC384B00AFF33D /* ProductService.m in Sources */,
+				070F3EE21CEE0D3300574D27 /* ProductDetailsViewController.m in Sources */,
 				07E672FA1CECB353006233A6 /* User.m in Sources */,
 				07E672F51CECA4DC006233A6 /* ProductDetailsAssembly.m in Sources */,
 				07D3B40E1CEC384F00AFF33D /* Product.m in Sources */,
+				070F3F011CEE44D200574D27 /* ShoppingCartService.m in Sources */,
 				07D3B4101CEC385C00AFF33D /* MetricsService.m in Sources */,
+				070F3EF31CEE3AC100574D27 /* ReservationConfirmation.m in Sources */,
+				070F3EE71CEE373A00574D27 /* ProductDetailsDomain.m in Sources */,
+				070F3F061CEE450F00574D27 /* ShoppingCartAssembly.m in Sources */,
+				070F3EEB1CEE386400574D27 /* SKU.m in Sources */,
 				070908F61CEC3777008B56AC /* ProductServiceSpec.mm in Sources */,
 				07D3B4111CEC386000AFF33D /* HTTPRequest.m in Sources */,
 				0739CABD1CEC372F006FDB07 /* Specs.m in Sources */,
 				070F3ED81CEE098300574D27 /* ProductDetailsViewModel.m in Sources */,
+				070F3EF71CEE406000574D27 /* CustomerReview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,15 +620,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070F3EE61CEE373A00574D27 /* ProductDetailsDomain.m in Sources */,
 				07E672F91CECB353006233A6 /* User.m in Sources */,
-				07D72EC41CEBDD100015080E /* ViewController.m in Sources */,
 				074E0FD21CEBE240005CC2F9 /* HTTPRequest.m in Sources */,
+				070F3F001CEE44D200574D27 /* ShoppingCartService.m in Sources */,
+				070F3EE11CEE0D3300574D27 /* ProductDetailsViewController.m in Sources */,
 				070F3ED71CEE098300574D27 /* ProductDetailsViewModel.m in Sources */,
+				070F3EF61CEE406000574D27 /* CustomerReview.m in Sources */,
 				074E0FC71CEBDFB3005CC2F9 /* ProductService.m in Sources */,
+				070F3EEA1CEE386400574D27 /* SKU.m in Sources */,
 				074E0FC21CEBDED3005CC2F9 /* Product.m in Sources */,
 				074E0FCB1CEBE042005CC2F9 /* MetricsService.m in Sources */,
 				074E0FCE1CEBE0C4005CC2F9 /* MainAssembly.m in Sources */,
 				07D72EC11CEBDD100015080E /* AppDelegate.m in Sources */,
+				070F3EF21CEE3AC100574D27 /* ReservationConfirmation.m in Sources */,
+				070F3F051CEE450F00574D27 /* ShoppingCartAssembly.m in Sources */,
 				07D72EBE1CEBDD100015080E /* main.m in Sources */,
 				07E672F41CECA4DC006233A6 /* ProductDetailsAssembly.m in Sources */,
 			);

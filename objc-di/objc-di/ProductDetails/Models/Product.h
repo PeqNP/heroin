@@ -4,11 +4,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class SKU;
+
 @interface Product : NSObject
 
 @property (nonatomic, strong, readonly) NSString *productId;
 @property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSArray<SKU *> *skus;
 
-+ (instancetype)productFromDictionary:(NSDictionary *)dict;
++ (instancetype)fromDictionary:(NSDictionary *)dict;
 
 @end
