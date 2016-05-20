@@ -4,6 +4,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class ProductDetailsViewModel;
+
 @interface ProductDetailsViewController : UIViewController
+
+- (instancetype)initWithProductDetailsViewModel:(ProductDetailsViewModel *)viewModel;
 
 @end

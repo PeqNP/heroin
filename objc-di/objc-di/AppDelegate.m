@@ -4,8 +4,9 @@
 
 #import "AppDelegate.h"
 #import "MainAssembly.h"
+#import "MainDomain.h"
 #import "ProductDetailsAssembly.h"
-#import "ProductDetailsViewController.h"
+#import "ProductCatalogViewController.h"
 
 @implementation AppDelegate
 
@@ -15,9 +16,9 @@
         @"metrics-api-key": @"1234abcd"
     }] setInstance];
     
-    ProductDetailsViewController *productDetailsController = [[productDetailsController alloc] initWithProductId:@"1234"];
-    UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:productDetailsController];
-    self.window.rootViewController = [[UIViewController alloc] init];
+    ProductCatalogViewController *catalogViewController = [[ProductCatalogViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:catalogViewController];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;

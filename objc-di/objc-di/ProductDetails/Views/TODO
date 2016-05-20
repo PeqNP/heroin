@@ -1,0 +1,7 @@
+- ProductImageCarousel - A collection view that contains medium sized product images.
+- SKUDrawer - A drawer that slides in/out with available SKUs.
+- ProductInfoSlab - Contains the product's name, any special discounts or event related info about the product (holiday, etc.)
+- ProductActionSlab - Contains all actions that can be performed on the shopping cart / reservation / wishlist.
+- ProductReviewSlab - Contains an image with stars that can be expanded to show first 3 reviews of product.
+- SuggestedProductsCarousel X 2 - A carousel that provides related/suggested/recommended products with an image and the product's name.
+- PolicyLinksSlab - Provides links to our privacy policy, copyright, etc.

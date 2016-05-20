@@ -7,9 +7,11 @@
 #import "KSPromise.h"
 
 @class BannerNotification;
+@class CustomerReviewSlabViewModel;
 @class ProductDetailsDomain;
 @class SKU;
 @class SKUThumbnailViewModel;
+@class SuggestedProductViewModel;
 
 @interface ProductDetailsViewModel : NSObject
 
@@ -25,6 +27,8 @@
 - (instancetype)initWithProductDetailsDomain:(ProductDetailsDomain *)productDetailsDomain NS_DESIGNATED_INITIALIZER;
 
 - (NSArray<SKUThumbnailViewModel *> *)skuThumbnailViewModels;
+- (CustomerReviewSlabViewModel *)customerReviewSlabViewModel;
+- (NSArray<SuggestedProductViewModel *> *)suggestedProducts;
 - (void)reserveProductForPickup;
 - (void)addToShoppingCart;
 - (void)selectSku:(SKU *)sku;

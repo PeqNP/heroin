@@ -5,9 +5,17 @@
 #import "ProductDetailsViewController.h"
 
 @interface ProductDetailsViewController ()
-
+@property (nonatomic, strong) ProductDetailsViewModel *viewModel;
 @end
 
 @implementation ProductDetailsViewController
+
+- (instancetype)initWithProductDetailsViewModel:(ProductDetailsViewModel *)viewModel {
+    self = [super init];
+    if (self) {
+        _viewModel = viewModel;
+    }
+    return self;
+}
 
 @end
