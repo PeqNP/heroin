@@ -2,12 +2,12 @@
  Copyright (c) 2016 Upstart Illustration LLC. All rights reserved.
  */
 
-#import "DeferredImageView.h"
+#import "OnDemandImageView.h"
 #import "di.h"
 #import "MainAssembly.h"
 #import "HTTPRequest.h"
 
-@interface DeferredImageView ()
+@interface OnDemandImageView ()
 
 di_property(HTTPRequest, imageRequest)
 
@@ -15,7 +15,7 @@ di_property(HTTPRequest, imageRequest)
 
 @end
 
-@implementation DeferredImageView
+@implementation OnDemandImageView
 
 di_inject(MainAssembly, HTTPRequest, imageRequest)
 
