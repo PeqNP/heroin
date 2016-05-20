@@ -11,17 +11,17 @@
 
 @interface ProductService ()
 di_property(MetricsService, metricsService)
-di_property(HTTPRequest, httpRequest)
+di_property(HTTPRequest, secureRequest)
 @end
 
 @implementation ProductService
 
 di_inject(MainAssembly, MetricsService, metricsService)
-di_inject(MainAssembly, HTTPRequest, httpRequest)
+di_inject(MainAssembly, HTTPRequest, secureRequest)
 
 - (KSPromise<Product *> *)promiseForProductWithId:(NSString *)productId {
     [self.metricsService logEvent:@"RequestedProduct"];
-    return [[self.httpRequest request:@"/product" post:@{@"id": productId}] then:^Product *(NSDictionary *response) {
+    return [[self.secureRequest request:@"/product" post:@{@"id": productId}] then:^Product *(NSDictionary *response) {
         return [Product fromDictionary:response];
     } error:^id(NSError *error) {
         return error;

@@ -5,7 +5,6 @@
 #import "ProductDetailsViewModel.h"
 #import "di.h"
 #import "BannerNotification.h"
-#import "ProductDetailsAssembly.h"
 #import "ProductDetailsModel.h"
 
 @interface ProductDetailsViewModel ()
@@ -36,9 +35,25 @@
     return self;
 }
 
-- (NSArray<SKUThumbnailViewModel *> *)skuThumbnailViewModels {
+#pragma mark - ViewModels
+
+- (ProductInfoViewModel *)productInfo {
     return nil;
 }
+
+- (NSArray<SKUThumbnailViewModel *> *)skuThumbnails {
+    return nil;
+}
+
+- (CustomerReviewSummaryViewModel *)customerReviewSummary {
+    return nil;
+}
+
+- (NSArray<SuggestedProductViewModel *> *)suggestedProducts {
+    return nil;
+}
+
+#pragma mark - Actions
 
 - (void)addToShoppingCart {
     self.isAddToShoppingCartButtonBusy = YES;

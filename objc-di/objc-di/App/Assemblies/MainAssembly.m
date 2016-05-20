@@ -9,7 +9,7 @@
 #import "ProductService.h"
 
 @interface MainAssembly ()
-@property (nonatomic, strong) HTTPRequest *httpRequest;
+@property (nonatomic, strong) HTTPRequest *secureRequest;
 @property (nonatomic, strong) HTTPRequest *imageRequest;
 @property (nonatomic, strong) MetricsService *metricsService;
 @property (nonatomic, strong) ProductService *productService;
@@ -23,7 +23,7 @@ static MainAssembly *sInstance;
 - (instancetype)initWithConfiguration:(NSDictionary *)config {
     self = [super init];
     if (self) {
-        _httpRequest = [[HTTPRequest alloc] initWithBaseUrl:config[@"http-base-url"]];
+        _secureRequest = [[HTTPRequest alloc] initWithBaseUrl:config[@"secure-base-url"]];
         _imageRequest = [[HTTPRequest alloc] initWithBaseUrl:config[@"image-service-base-url"]];
         _metricsService = [[MetricsService alloc] initWithAppKey:config[@"metrics-app-key"]];
         _user = [self getUserFromCache];

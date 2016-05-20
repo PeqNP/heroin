@@ -16,7 +16,7 @@
 
 @interface MainAssembly : NSObject <DIAssembly>
 
-@property (nonatomic, strong, readonly) HTTPRequest *httpRequest;
+@property (nonatomic, strong, readonly) HTTPRequest *secureRequest;
 @property (nonatomic, strong, readonly) HTTPRequest *imageRequest;
 @property (nonatomic, strong, readonly) MetricsService *metricsService;
 @property (nonatomic, strong, readonly) ProductService *productService;

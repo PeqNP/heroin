@@ -3,18 +3,17 @@
  */
 
 #import "AppDelegate.h"
-#import "MainAssembly.h"
-#import "MainDomain.h"
-#import "ProductDetailsAssembly.h"
+#import "App.h"
 #import "ProductCatalogViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[[MainAssembly alloc] initWithConfiguration:@{
-        @"http-base-url": @"https://secure-api.example.com",
+    [App appWithConfig:@{
+        @"secure-base-url": @"https://secure-api.example.com",
+        @"image-service-base-url": @"https://image.example.com",
         @"metrics-api-key": @"1234abcd"
-    }] setInstance];
+    }];
     
     ProductCatalogViewController *catalogViewController = [[ProductCatalogViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:catalogViewController];

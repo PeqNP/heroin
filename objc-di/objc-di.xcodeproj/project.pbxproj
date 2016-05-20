@@ -20,8 +20,6 @@
 		070F3F061CEE450F00574D27 /* ShoppingCartAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F041CEE450F00574D27 /* ShoppingCartAssembly.m */; };
 		070F3F111CEE619F00574D27 /* SKUThumbnailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F101CEE619F00574D27 /* SKUThumbnailViewModel.m */; };
 		070F3F121CEE619F00574D27 /* SKUThumbnailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F101CEE619F00574D27 /* SKUThumbnailViewModel.m */; };
-		070F3F191CEE85C800574D27 /* MainDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F181CEE85C800574D27 /* MainDomain.m */; };
-		070F3F1A1CEE85C800574D27 /* MainDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F181CEE85C800574D27 /* MainDomain.m */; };
 		070F3F241CEF56ED00574D27 /* ProductService.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F231CEF56ED00574D27 /* ProductService.m */; };
 		070F3F251CEF56ED00574D27 /* ProductService.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F231CEF56ED00574D27 /* ProductService.m */; };
 		070F3F311CEF655500574D27 /* ProductCatalogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F3F301CEF655500574D27 /* ProductCatalogViewController.m */; };
@@ -46,6 +44,7 @@
 		074E0FD21CEBE240005CC2F9 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */; };
 		07812E431CEF6F7B003F754D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07812E411CEF6F7B003F754D /* Main.storyboard */; };
 		07812E471CEF959B003F754D /* DeferredImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07812E461CEF959B003F754D /* DeferredImageView.m */; };
+		07812E4A1CEF9A42003F754D /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 07812E491CEF9A42003F754D /* App.m */; };
 		07D3B40F1CEC385700AFF33D /* MainAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FCD1CEBE0C4005CC2F9 /* MainAssembly.m */; };
 		07D3B4101CEC385C00AFF33D /* MetricsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FCA1CEBE042005CC2F9 /* MetricsService.m */; };
 		07D3B4111CEC386000AFF33D /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */; };
@@ -80,8 +79,6 @@
 		070F3F041CEE450F00574D27 /* ShoppingCartAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShoppingCartAssembly.m; path = ShoppingCart/Assemblies/ShoppingCartAssembly.m; sourceTree = "<group>"; };
 		070F3F0F1CEE619F00574D27 /* SKUThumbnailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKUThumbnailViewModel.h; path = ProductDetails/ViewModels/SKUThumbnailViewModel.h; sourceTree = "<group>"; };
 		070F3F101CEE619F00574D27 /* SKUThumbnailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKUThumbnailViewModel.m; path = ProductDetails/ViewModels/SKUThumbnailViewModel.m; sourceTree = "<group>"; };
-		070F3F171CEE85C800574D27 /* MainDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainDomain.h; path = App/Domains/MainDomain.h; sourceTree = "<group>"; };
-		070F3F181CEE85C800574D27 /* MainDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainDomain.m; path = App/Domains/MainDomain.m; sourceTree = "<group>"; };
 		070F3F221CEF56ED00574D27 /* ProductService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductService.h; path = App/Services/ProductService.h; sourceTree = "<group>"; };
 		070F3F231CEF56ED00574D27 /* ProductService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductService.m; path = App/Services/ProductService.m; sourceTree = "<group>"; };
 		070F3F2C1CEF5CF500574D27 /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO; path = ProductDetails/Views/TODO; sourceTree = "<group>"; };
@@ -114,6 +111,8 @@
 		07812E421CEF6F7B003F754D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07812E451CEF959A003F754D /* DeferredImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeferredImageView.h; path = Shared/Views/DeferredImageView.h; sourceTree = "<group>"; };
 		07812E461CEF959B003F754D /* DeferredImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeferredImageView.m; path = Shared/Views/DeferredImageView.m; sourceTree = "<group>"; };
+		07812E481CEF9A42003F754D /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = App.h; path = App/App.h; sourceTree = "<group>"; };
+		07812E491CEF9A42003F754D /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = App.m; path = App/App.m; sourceTree = "<group>"; };
 		07D3B4121CEC395300AFF33D /* DIAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIAssembly.h; path = App/DIAssembly.h; sourceTree = "<group>"; };
 		07D72EB91CEBDD100015080E /* objc-di.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-di.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D72EBD1CEBDD100015080E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -200,15 +199,6 @@
 			name = Assemblies;
 			sourceTree = "<group>";
 		};
-		070F3F161CEE85AF00574D27 /* Domains */ = {
-			isa = PBXGroup;
-			children = (
-				070F3F171CEE85C800574D27 /* MainDomain.h */,
-				070F3F181CEE85C800574D27 /* MainDomain.m */,
-			);
-			name = Domains;
-			sourceTree = "<group>";
-		};
 		070F3F2B1CEF5CD200574D27 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,10 +273,11 @@
 		074E0FB61CEBDDB9005CC2F9 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				07812E481CEF9A42003F754D /* App.h */,
+				07812E491CEF9A42003F754D /* App.m */,
 				074E0FC31CEBDEF4005CC2F9 /* di.h */,
 				07D3B4121CEC395300AFF33D /* DIAssembly.h */,
 				074E0FBC1CEBDE37005CC2F9 /* Assemblies */,
-				070F3F161CEE85AF00574D27 /* Domains */,
 				07E672F61CECB339006233A6 /* Models */,
 				074E0FBD1CEBDE87005CC2F9 /* Services */,
 				074E0FCF1CEBE226005CC2F9 /* Utilities */,
@@ -668,7 +659,6 @@
 				070F3F3E1CEF6C4E00574D27 /* BannerNotification.m in Sources */,
 				070F3EDD1CEE0AA200574D27 /* ProductDetailsViewModelSpec.mm in Sources */,
 				070F3EE21CEE0D3300574D27 /* ProductDetailsViewController.m in Sources */,
-				070F3F1A1CEE85C800574D27 /* MainDomain.m in Sources */,
 				07E672FA1CECB353006233A6 /* User.m in Sources */,
 				070F3F121CEE619F00574D27 /* SKUThumbnailViewModel.m in Sources */,
 				070F3F011CEE44D200574D27 /* ShoppingCartService.m in Sources */,
@@ -699,13 +689,13 @@
 				070F3F001CEE44D200574D27 /* ShoppingCartService.m in Sources */,
 				070F3EE11CEE0D3300574D27 /* ProductDetailsViewController.m in Sources */,
 				070F3F241CEF56ED00574D27 /* ProductService.m in Sources */,
+				07812E4A1CEF9A42003F754D /* App.m in Sources */,
 				070F3F111CEE619F00574D27 /* SKUThumbnailViewModel.m in Sources */,
 				070F3F4D1CEF6DC800574D27 /* SKU.m in Sources */,
 				070F3F3D1CEF6C4E00574D27 /* BannerNotification.m in Sources */,
 				070F3ED71CEE098300574D27 /* ProductDetailsViewModel.m in Sources */,
 				074E0FCB1CEBE042005CC2F9 /* MetricsService.m in Sources */,
 				074E0FCE1CEBE0C4005CC2F9 /* MainAssembly.m in Sources */,
-				070F3F191CEE85C800574D27 /* MainDomain.m in Sources */,
 				070F3F311CEF655500574D27 /* ProductCatalogViewController.m in Sources */,
 				07D72EC11CEBDD100015080E /* AppDelegate.m in Sources */,
 				070F3F051CEE450F00574D27 /* ShoppingCartAssembly.m in Sources */,
