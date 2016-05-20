@@ -14,8 +14,8 @@ The pattern used by this project is referred to as a Service Locater. It does no
 
 ## TODO
 
-- Have code that will check if sInstance already exists and crash if it is. (Enforce a single instance)
-- Remove setInstance and remove from DIAssembly protocol.
+- (?) Remove setInstance and remove from DIAssembly protocol.
 - Remove need to call afterEach in Cedar specs.
-- Methods to unset/destroy singleton instances for short-living assemblies.
+- Methods to unset/destroy singleton instances for short-living assemblies. NOTE: This may actually not be necessary.
   - Example showing the life-cycle of short-lived assemblies.
+- Move Specs into the Specs group and group the specs in the same way as the module is organized.
