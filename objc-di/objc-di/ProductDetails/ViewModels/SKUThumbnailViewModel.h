@@ -7,8 +7,6 @@
 
 @interface SKUThumbnailViewModel : NSObject
 
-@property (nonatomic, assign, readonly) BOOL isImageLoading;
-
 @property (nonatomic, strong, readonly) UIImage *image;
 @property (nonatomic, strong, readonly) NSString *name;
 

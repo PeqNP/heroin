@@ -6,6 +6,4 @@
 
 @interface ProductDetailsViewController : UIViewController
 
-- (instancetype)initWithProductId:(NSString *)productId NS_DESIGNATED_INITIALIZER;
-
 @end

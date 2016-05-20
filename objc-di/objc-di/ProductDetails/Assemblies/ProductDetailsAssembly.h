@@ -16,6 +16,5 @@
 // Drives image carousel, customer reviews, product details, etc.
 @property (nonatomic, strong, readonly) ProductDetailsViewModel *productDetailsViewModel;
 
-- (instancetype)initWithProductDetailsDomain:(ProductDetailsDomain *)productDetailsDomain NS_DESIGNATED_INITIALIZER;
 
 @end

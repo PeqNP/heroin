@@ -13,6 +13,7 @@
 @class Product;
 @class ReservationConfirmation;
 @class SKU;
+@class SKUThumbnail;
 @class SuggestedProduct;
 @class UIImage;
 
@@ -22,9 +23,10 @@
 
 - (instancetype)initWithProduct:(Product *)product NS_DESIGNATED_INITIALIZER;
 
-- (KSPromise<NSArray<UIImage *> *> *)getProductImages;
-- (KSPromise<NSArray<CustomerReview *> *> *)getCustomerReviews;
-- (KSPromise<NSArray<SuggestedProduct *> *> *)getSuggestedProducts;
+- (KSPromise<NSArray<UIImage *> *> *)productImages;
+- (KSPromise<NSArray<CustomerReview *> *> *)customerReviews;
+- (KSPromise<NSArray<SuggestedProduct *> *> *)suggestedProducts;
+- (KSPromise<NSArray<SKUThumbnail *> *> *)skuThumbnails;
 
 /** By default, the amount to purchase is 1. */
 - (void)setAmount:(NSInteger)amount;

@@ -10,8 +10,4 @@
 
 @implementation ProductDetailsViewController
 
-- (instancetype)initWithProductId:(NSString *)productId {
-    
-}
-
 @end

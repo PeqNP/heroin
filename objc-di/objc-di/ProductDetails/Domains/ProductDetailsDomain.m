@@ -41,16 +41,21 @@ di_inject(ShoppingCartAssembly, ShoppingCartService, shoppingCartService)
     }
     return self;
 }
+            
 
-- (KSPromise<NSArray<UIImage *> *> *)getProductImages {
+- (KSPromise<NSArray<UIImage *> *> *)productImages {
     return nil;
 }
 
-- (KSPromise<NSArray<CustomerReview *> *> *)getCustomerReviews {
+- (KSPromise<NSArray<CustomerReview *> *> *)customerReviews {
     return nil;
 }
 
-- (KSPromise<NSArray<SuggestedProduct *> *> *)getSuggestedProducts {
+- (KSPromise<NSArray<SuggestedProduct *> *> *)suggestedProducts {
+    return nil;
+}
+
+- (KSPromise<NSArray<SKUThumbnail *> *> *)skuThumbnails {
     return nil;
 }
 
