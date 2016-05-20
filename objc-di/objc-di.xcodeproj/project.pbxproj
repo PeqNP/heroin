@@ -45,6 +45,7 @@
 		074E0FCE1CEBE0C4005CC2F9 /* MainAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FCD1CEBE0C4005CC2F9 /* MainAssembly.m */; };
 		074E0FD21CEBE240005CC2F9 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */; };
 		07812E431CEF6F7B003F754D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07812E411CEF6F7B003F754D /* Main.storyboard */; };
+		07812E471CEF959B003F754D /* DeferredImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07812E461CEF959B003F754D /* DeferredImageView.m */; };
 		07D3B40F1CEC385700AFF33D /* MainAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FCD1CEBE0C4005CC2F9 /* MainAssembly.m */; };
 		07D3B4101CEC385C00AFF33D /* MetricsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FCA1CEBE042005CC2F9 /* MetricsService.m */; };
 		07D3B4111CEC386000AFF33D /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */; };
@@ -111,6 +112,8 @@
 		074E0FD01CEBE240005CC2F9 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPRequest.h; path = App/Utilities/HTTPRequest.h; sourceTree = "<group>"; };
 		074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPRequest.m; path = App/Utilities/HTTPRequest.m; sourceTree = "<group>"; };
 		07812E421CEF6F7B003F754D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07812E451CEF959A003F754D /* DeferredImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeferredImageView.h; path = Shared/Views/DeferredImageView.h; sourceTree = "<group>"; };
+		07812E461CEF959B003F754D /* DeferredImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeferredImageView.m; path = Shared/Views/DeferredImageView.m; sourceTree = "<group>"; };
 		07D3B4121CEC395300AFF33D /* DIAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIAssembly.h; path = App/DIAssembly.h; sourceTree = "<group>"; };
 		07D72EB91CEBDD100015080E /* objc-di.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-di.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D72EBD1CEBDD100015080E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -235,6 +238,7 @@
 		070F3F391CEF6BF800574D27 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				07812E441CEF955E003F754D /* Views */,
 				070F3F3A1CEF6C0700574D27 /* Models */,
 			);
 			name = Shared;
@@ -366,6 +370,15 @@
 				074E0FD11CEBE240005CC2F9 /* HTTPRequest.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		07812E441CEF955E003F754D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07812E451CEF959A003F754D /* DeferredImageView.h */,
+				07812E461CEF959B003F754D /* DeferredImageView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		07D72EB01CEBDD100015080E = {
@@ -677,6 +690,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07812E471CEF959B003F754D /* DeferredImageView.m in Sources */,
 				07E672F91CECB353006233A6 /* User.m in Sources */,
 				070F3F491CEF6DC800574D27 /* Product.m in Sources */,
 				070F3F521CEF6E3700574D27 /* ProductDetailsModel.m in Sources */,

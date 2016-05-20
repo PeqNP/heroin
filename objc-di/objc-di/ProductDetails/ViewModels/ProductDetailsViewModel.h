@@ -7,8 +7,9 @@
 #import "KSPromise.h"
 
 @class BannerNotification;
-@class CustomerReviewSlabViewModel;
+@class CustomerReviewSummaryViewModel;
 @class ProductDetailsModel;
+@class ProductInfoViewModel;
 @class SKU;
 @class SKUThumbnailViewModel;
 @class SuggestedProductViewModel;
@@ -26,8 +27,16 @@
 
 - (instancetype)initWithProductDetailsDomain:(ProductDetailsModel *)productDetailsDomain NS_DESIGNATED_INITIALIZER;
 
-- (NSArray<SKUThumbnailViewModel *> *)skuThumbnailViewModels;
-- (CustomerReviewSlabViewModel *)customerReviewSlabViewModel;
+/** Provides a view model which represents all of the product information including name, price, sale price, event (holiday) info, etc. */
+- (ProductInfoViewModel *)productInfo;
+
+/** Provides list of available SKUs. */
+- (NSArray<SKUThumbnailViewModel *> *)skuThumbnails;
+
+/** Provides customer review related information including the rating and the number of customer reviews. This view model provides a way for the user to access the customer reviews. */
+- (CustomerReviewSummaryViewModel *)customerReviewSummary;
+
+/** Provides list of suggested products. */
 - (NSArray<SuggestedProductViewModel *> *)suggestedProducts;
 
 - (void)reserveProductForPickup;

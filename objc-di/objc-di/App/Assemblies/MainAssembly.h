@@ -1,4 +1,8 @@
 /**
+ 
+ TODO:
+ - Rename httpRequest to serviceRequest and change corresponding config.
+ 
  Copyright (c) 2016 Upstart Illustration LLC. All rights reserved.
  */
 
@@ -13,6 +17,7 @@
 @interface MainAssembly : NSObject <DIAssembly>
 
 @property (nonatomic, strong, readonly) HTTPRequest *httpRequest;
+@property (nonatomic, strong, readonly) HTTPRequest *imageRequest;
 @property (nonatomic, strong, readonly) MetricsService *metricsService;
 @property (nonatomic, strong, readonly) ProductService *productService;
 @property (nonatomic, strong, readonly) User *user;

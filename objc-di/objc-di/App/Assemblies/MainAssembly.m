@@ -10,6 +10,7 @@
 
 @interface MainAssembly ()
 @property (nonatomic, strong) HTTPRequest *httpRequest;
+@property (nonatomic, strong) HTTPRequest *imageRequest;
 @property (nonatomic, strong) MetricsService *metricsService;
 @property (nonatomic, strong) ProductService *productService;
 @property (nonatomic, strong) User *user;
@@ -22,10 +23,11 @@ static MainAssembly *sInstance;
 - (instancetype)initWithConfiguration:(NSDictionary *)config {
     self = [super init];
     if (self) {
-        self.httpRequest = [[HTTPRequest alloc] initWithBaseUrl:config[@"http-base-url"]];
-        self.metricsService = [[MetricsService alloc] initWithAppKey:config[@"metrics-app-key"]];
-        self.user = [self getUserFromCache];
-        self.productService = [[ProductService alloc] init];
+        _httpRequest = [[HTTPRequest alloc] initWithBaseUrl:config[@"http-base-url"]];
+        _imageRequest = [[HTTPRequest alloc] initWithBaseUrl:config[@"image-service-base-url"]];
+        _metricsService = [[MetricsService alloc] initWithAppKey:config[@"metrics-app-key"]];
+        _user = [self getUserFromCache];
+        _productService = [[ProductService alloc] init];
     }
     return self;
 }
