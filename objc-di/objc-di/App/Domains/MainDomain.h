@@ -9,6 +9,6 @@
 
 @interface MainDomain : NSObject
 
-- (KSPromise<ProductDetailsDomain *> *)productDetailsDomainWithProductId:(NSString *)productId;
+- (KSPromise<ProductDetailsModel *> *)productDetailsDomainWithProductId:(NSString *)productId;
 
 @end

@@ -20,7 +20,7 @@
     
     NSMutableArray<SKU *> *skus = [NSMutableArray array];
     for (NSDictionary *sku in dict[@"skus"]) {
-        [skus addObject:[SKU skuFromDictionary:sku]];
+        [skus addObject:[SKU fromDictionary:sku]];
     }
     product.skus = skus;
     
