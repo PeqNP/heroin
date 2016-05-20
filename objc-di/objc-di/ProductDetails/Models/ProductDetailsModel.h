@@ -1,5 +1,5 @@
 /**
- The ProductDetailsDomain model provides all business logic to add products to the cart or reserve product for later pickup. It is meant to provide a simple interface hiding the wiring muck between server and application.
+ The ProductDetailsModel provides all business logic to add products to the cart or reserve product for later pickup. It is meant to provide a simple interface hiding the wiring muck between server and application.
  
  It will contain state when looking at a specific product.
  

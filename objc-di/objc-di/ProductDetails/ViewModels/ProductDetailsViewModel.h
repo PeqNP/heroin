@@ -29,6 +29,7 @@
 - (NSArray<SKUThumbnailViewModel *> *)skuThumbnailViewModels;
 - (CustomerReviewSlabViewModel *)customerReviewSlabViewModel;
 - (NSArray<SuggestedProductViewModel *> *)suggestedProducts;
+
 - (void)reserveProductForPickup;
 - (void)addToShoppingCart;
 - (void)selectSku:(SKU *)sku;
