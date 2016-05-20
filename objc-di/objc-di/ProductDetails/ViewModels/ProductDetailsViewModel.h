@@ -8,7 +8,7 @@
 
 @class BannerNotification;
 @class CustomerReviewSlabViewModel;
-@class ProductDetailsDomain;
+@class ProductDetailsModel;
 @class SKU;
 @class SKUThumbnailViewModel;
 @class SuggestedProductViewModel;
@@ -24,7 +24,7 @@
 @property (nonatomic, strong, readonly) NSString *productId;
 @property (nonatomic, strong, readonly) UIImage *selectedSkuImage;
 
-- (instancetype)initWithProductDetailsDomain:(ProductDetailsDomain *)productDetailsDomain NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithProductDetailsDomain:(ProductDetailsModel *)productDetailsDomain NS_DESIGNATED_INITIALIZER;
 
 - (NSArray<SKUThumbnailViewModel *> *)skuThumbnailViewModels;
 - (CustomerReviewSlabViewModel *)customerReviewSlabViewModel;

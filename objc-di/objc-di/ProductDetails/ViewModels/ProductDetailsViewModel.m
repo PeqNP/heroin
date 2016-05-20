@@ -6,7 +6,7 @@
 #import "di.h"
 #import "BannerNotification.h"
 #import "ProductDetailsAssembly.h"
-#import "ProductDetailsDomain.h"
+#import "ProductDetailsModel.h"
 
 @interface ProductDetailsViewModel ()
 
@@ -17,7 +17,7 @@
 @property (nonatomic, strong) BannerNotification *bannerNotification;
 @property (nonatomic, strong) UIImage *selectedSkuImage;
 
-@property (nonatomic, strong) ProductDetailsDomain *productDetailsDomain;
+@property (nonatomic, strong) ProductDetailsModel *productDetailsDomain;
 
 @end
 
@@ -28,7 +28,7 @@
     return [self initWithProductDetailsDomain:nil];
 }
 
-- (instancetype)initWithProductDetailsDomain:(ProductDetailsDomain *)productDetailsDomain {
+- (instancetype)initWithProductDetailsDomain:(ProductDetailsModel *)productDetailsDomain {
     self = [super init];
     if (self) {
         _productDetailsDomain = productDetailsDomain;

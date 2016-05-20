@@ -2,7 +2,7 @@
  Copyright (c) 2016 Upstart Illustration LLC. All rights reserved.
  */
 
-#import "ProductDetailsDomain.h"
+#import "ProductDetailsModel.h"
 #import "di.h"
 #import "MainAssembly.h"
 #import "ShoppingCartAssembly.h"
@@ -10,7 +10,7 @@
 #import "MetricsService.h"
 #import "ShoppingCartService.h"
 
-@interface ProductDetailsDomain ()
+@interface ProductDetailsModel ()
 
 di_property(MetricsService, metricsService)
 di_property(User, user)
@@ -22,7 +22,7 @@ di_property(ShoppingCartService, shoppingCartService)
 
 @end
 
-@implementation ProductDetailsDomain
+@implementation ProductDetailsModel
 
 di_inject(MainAssembly, MetricsService, metricsService)
 di_inject(MainAssembly, User, user)

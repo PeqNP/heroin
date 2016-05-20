@@ -5,7 +5,7 @@
 #import <Foundation/Foundation.h>
 #import "KSPromise.h"
 
-@class ProductDetailsDomain;
+@class ProductDetailsModel;
 
 @interface MainDomain : NSObject
 

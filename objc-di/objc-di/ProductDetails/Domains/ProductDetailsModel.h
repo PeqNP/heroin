@@ -17,7 +17,7 @@
 @class SuggestedProduct;
 @class UIImage;
 
-@interface ProductDetailsDomain : NSObject
+@interface ProductDetailsModel : NSObject
 
 @property (nonatomic, strong, readonly) Product *product;
 

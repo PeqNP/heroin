@@ -8,7 +8,7 @@
 
 @interface ProductDetailsAssembly ()
 @property (nonatomic, strong) ProductService *productService;
-@property (nonatomic, strong) ProductDetailsDomain *productDetailsDomain;
+@property (nonatomic, strong) ProductDetailsModel *productDetailsDomain;
 @end
 
 static ProductDetailsAssembly *sInstance;
@@ -20,7 +20,7 @@ static ProductDetailsAssembly *sInstance;
     return [self initWithProductDetailsDomain:nil];
 }
 
-- (instancetype)initWithProductDetailsDomain:(ProductDetailsDomain *)productDetailsDomain {
+- (instancetype)initWithProductDetailsDomain:(ProductDetailsModel *)productDetailsDomain {
     self = [super init];
     if (self) {
         _productDetailsDomain = productDetailsDomain;
