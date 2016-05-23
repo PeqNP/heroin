@@ -1,13 +1,22 @@
 PODS:
   - Cedar (1.0)
   - KSDeferred (0.3.1)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
 
 DEPENDENCIES:
   - Cedar
   - KSDeferred
+  - ReactiveCocoa (~> 2)
 
 SPEC CHECKSUMS:
   Cedar: a641e5ed0353bd9d45782ce365d0822b7342cce3
   KSDeferred: 45c9bd1dcf4ece146ea23bd8d9605c41e19458b1
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
 COCOAPODS: 0.39.0

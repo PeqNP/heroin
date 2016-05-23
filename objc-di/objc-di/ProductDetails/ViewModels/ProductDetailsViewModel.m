@@ -6,17 +6,18 @@
 #import "di.h"
 #import "BannerNotification.h"
 #import "ProductDetailsModel.h"
+#import "Product.h"
+#import "RACSignal.h"
+#import "RACSubscriber.h"
 
 @interface ProductDetailsViewModel ()
 
-@property (nonatomic, assign) BOOL isLoadingSelectedSkuImage;
-@property (nonatomic, assign) BOOL isReserveProductButtonBusy;
-@property (nonatomic, assign) BOOL isAddToShoppingCartButtonBusy;
+@property (nonatomic, strong) RACSignal *loadingSkuSignal;
+@property (nonatomic, strong) RACSignal *reserveProductSignal;
+@property (nonatomic, strong) RACSignal *addToShoppingCartSignal;
+@property (nonatomic, strong) RACSignal *bannerSignal;
 
-@property (nonatomic, strong) BannerNotification *bannerNotification;
-@property (nonatomic, strong) UIImage *selectedSkuImage;
-
-@property (nonatomic, strong) ProductDetailsModel *productDetailsDomain;
+@property (nonatomic, strong) ProductDetailsModel *productDetailsModel;
 
 @end
 
@@ -24,16 +25,46 @@
 
 - (instancetype)init {
     [self doesNotRecognizeSelector:_cmd];
-    return [self initWithProductDetailsDomain:nil];
+    return [self initWithProductDetailsModel:nil];
 }
 
-- (instancetype)initWithProductDetailsDomain:(ProductDetailsModel *)productDetailsDomain {
+- (instancetype)initWithProductDetailsModel:(ProductDetailsModel *)productDetailsModel {
     self = [super init];
     if (self) {
-        _productDetailsDomain = productDetailsDomain;
+        _productDetailsModel = productDetailsModel;
     }
     return self;
 }
+
+#pragma mark - Private
+
+- (void)createSignals {
+//    self.addToShoppingCartSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        [subscriber sendNext:@YES];
+//        [subscriber sendCompleted];
+//    }];
+}
+
+#pragma mark - Properties
+
+// FIXME: Leaking encapsulation. Is this OK so long as Product is an immutable object?
+
+- (NSString *)productId {
+    return self.productDetailsModel.product.productId;
+}
+
+- (NSString *)productName {
+    return self.productDetailsModel.product.name;
+}
+
+- (NSString *)productPrice {
+    return self.productDetailsModel.product.price;
+}
+
+- (NSArray<NSURL *> *)productImageUrls {
+    return self.productDetailsModel.product.imageUrls;
+}
+
 
 #pragma mark - ViewModels
 
@@ -56,13 +87,10 @@
 #pragma mark - Actions
 
 - (void)addToShoppingCart {
-    self.isAddToShoppingCartButtonBusy = YES;
-    [[self.productDetailsDomain addToShoppingCart] then:^id _Nullable(id empty) {
-        self.isAddToShoppingCartButtonBusy = NO;
+    [[self.productDetailsModel addToShoppingCart] then:^id _Nullable(id empty) {
         return empty;
     } error:^id(NSError *error) {
-        self.bannerNotification = [[BannerNotification alloc] initWithType:BannerNotificationTypeError title:@"Shopping Cart Error" message:@"Failed to add product to your shopping cart. Call 1.888.HELP.MEOW"];
-        self.isAddToShoppingCartButtonBusy = NO;
+//        self.bannerSignal = [[BannerNotification alloc] initWithType:BannerNotificationTypeError title:@"Shopping Cart Error" message:@"Failed to add product to your shopping cart. Call 1.888.HELP.MEOW"];
         return error;
     }];
     

@@ -13,19 +13,21 @@
 @class SKU;
 @class SKUThumbnailViewModel;
 @class SuggestedProductViewModel;
+@class RACSignal;
 
 @interface ProductDetailsViewModel : NSObject
 
-@property (nonatomic, assign, readonly) BOOL isLoadingSelectedSkuImage;
-@property (nonatomic, assign, readonly) BOOL isReserveProductButtonBusy;
-@property (nonatomic, assign, readonly) BOOL isAddToShoppingCartButtonBusy;
+@property (nonatomic, strong, readonly) RACSignal *loadingSkuSignal; // Provides UIImage
+@property (nonatomic, strong, readonly) RACSignal *reserveProductSignal; // Provides ReservationMessage
+@property (nonatomic, strong, readonly) RACSignal *addToShoppingCartSignal; // Provides YES/NO
+@property (nonatomic, strong, readonly) RACSignal *bannerSignal; // Provides BannerNotification
 
-@property (nonatomic, strong, readonly) BannerNotification *bannerNotification;
 @property (nonatomic, strong, readonly) NSString *productName;
+@property (nonatomic, strong, readonly) NSString *productPrice;
 @property (nonatomic, strong, readonly) NSString *productId;
-@property (nonatomic, strong, readonly) UIImage *selectedSkuImage;
+@property (nonatomic, strong, readonly) NSArray<NSURL *> *productImageUrls;
 
-- (instancetype)initWithProductDetailsDomain:(ProductDetailsModel *)productDetailsDomain NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithProductDetailsModel:(ProductDetailsModel *)productDetailsModel NS_DESIGNATED_INITIALIZER;
 
 /** Provides a view model which represents all of the product information including name, price, sale price, event (holiday) info, etc. */
 - (ProductInfoViewModel *)productInfo;

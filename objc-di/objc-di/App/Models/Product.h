@@ -10,7 +10,9 @@
 
 @property (nonatomic, strong, readonly) NSString *productId;
 @property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSString *price;
 @property (nonatomic, strong, readonly) NSArray<SKU *> *skus;
+@property (nonatomic, strong, readonly) NSArray<NSURL *> *imageUrls;
 
 + (instancetype)fromDictionary:(NSDictionary *)dict;
 

@@ -26,7 +26,7 @@ di_property(ShoppingCartService, shoppingCartService)
 
 di_inject(MainAssembly, MetricsService, metricsService)
 di_inject(MainAssembly, User, user)
-di_inject(ShoppingCartAssembly, ShoppingCartService, shoppingCartService)
+di_inject(ShoppingCartAssembly, ShoppingCartService, shoppingCartService) // ShoppingCartModel
 
 - (instancetype)init {
     [self doesNotRecognizeSelector:_cmd];

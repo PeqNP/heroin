@@ -8,7 +8,9 @@
 @interface Product ()
 @property (nonatomic, strong) NSString *productId;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *price;
 @property (nonatomic, strong) NSArray<SKU *> *skus;
+@property (nonatomic, strong) NSArray<NSURL *> *imageUrls;
 @end
 
 @implementation Product
@@ -23,6 +25,12 @@
         [skus addObject:[SKU fromDictionary:sku]];
     }
     product.skus = skus;
+    
+    NSMutableArray<NSURL *> *imageUrls = [NSMutableArray array];
+    for (NSString *imageUrl in dict[@"imageurls"]) {
+        [imageUrls addObject:[NSURL URLWithString:imageUrl]];
+    }
+    product.imageUrls = imageUrls;
     
     return product;
 }
