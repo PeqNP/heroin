@@ -16,8 +16,6 @@
 @property (nonatomic, strong) User *user;
 @end
 
-static MainAssembly *sInstance;
-
 @implementation MainAssembly
 
 - (instancetype)initWithConfiguration:(NSDictionary *)config {
@@ -30,16 +28,6 @@ static MainAssembly *sInstance;
         _productService = [[ProductService alloc] init];
     }
     return self;
-}
-
-#pragma mark - DIAssembly
-
-+ (MainAssembly *)getInstance {
-    return sInstance;
-}
-
-- (void)setInstance {
-    sInstance = self;
 }
 
 #pragma mark - Private

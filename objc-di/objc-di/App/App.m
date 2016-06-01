@@ -18,14 +18,14 @@ static App *sInstance;
 
 @implementation App
 
-di_inject(MainAssembly, ProductService, productService)
+di_inject(ProductService, productService)
 
 + (instancetype)appWithConfig:(NSDictionary *)config {
     if (sInstance) {
         @throw [NSException exceptionWithName:@"Double Invocation" reason:@"Attempting to init app more than once" userInfo:@{NSLocalizedDescriptionKey: @"Attempting to init app more than once. Stop it!"}];
     }
     
-    [[[MainAssembly alloc] initWithConfiguration:config] setInstance];
+    [DIServiceLocater registerAssembly:[[MainAssembly alloc] initWithConfiguration:config]];
     
     sInstance = [[App alloc] init];
     return sInstance;

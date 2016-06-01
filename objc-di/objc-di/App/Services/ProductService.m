@@ -4,7 +4,6 @@
 
 #import "ProductService.h"
 #import "di.h"
-#import "MainAssembly.h"
 #import "MetricsService.h"
 #import "HTTPRequest.h"
 #import "Product.h"
@@ -16,8 +15,8 @@ di_property(HTTPRequest, secureRequest)
 
 @implementation ProductService
 
-di_inject(MainAssembly, MetricsService, metricsService)
-di_inject(MainAssembly, HTTPRequest, secureRequest)
+di_inject(MetricsService, metricsService)
+di_inject(HTTPRequest, secureRequest)
 
 - (KSPromise<Product *> *)promiseForProductWithId:(NSString *)productId {
     [self.metricsService logEvent:@"RequestedProduct"];

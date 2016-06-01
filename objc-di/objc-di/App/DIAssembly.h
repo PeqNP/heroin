@@ -5,6 +5,4 @@
 #import <Foundation/Foundation.h>
 
 @protocol DIAssembly <NSObject>
-+ (instancetype)getInstance;
-- (void)setInstance;
 @end

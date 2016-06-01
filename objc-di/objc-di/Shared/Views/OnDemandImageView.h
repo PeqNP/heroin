@@ -13,6 +13,6 @@
 - (instancetype)initWithUrl:(NSURL *)url;
 
 /** Change the URL that is displayed in the image view. This follows the same rules, where the image will only be loaded when in view. */
-- (void)loadUrl:(NSURL *url);
+- (void)loadUrl:(NSURL *)url;
 
 @end

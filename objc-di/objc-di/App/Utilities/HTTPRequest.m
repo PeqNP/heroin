@@ -4,7 +4,6 @@
 
 #import "HTTPRequest.h"
 #import "di.h"
-#import "MainAssembly.h"
 #import "User.h"
 #import "KSDeferred.h"
 
@@ -15,7 +14,7 @@ di_property(User, user)
 
 @implementation HTTPRequest
 
-di_inject(MainAssembly, User, user)
+di_inject(User, user)
 
 - (instancetype)init {
     [self doesNotRecognizeSelector:_cmd];

@@ -4,7 +4,6 @@
 
 #import "OnDemandImageView.h"
 #import "di.h"
-#import "MainAssembly.h"
 #import "HTTPRequest.h"
 
 @interface OnDemandImageView ()
@@ -17,7 +16,7 @@ di_property(HTTPRequest, imageRequest)
 
 @implementation OnDemandImageView
 
-di_inject(MainAssembly, HTTPRequest, imageRequest)
+di_inject(HTTPRequest, imageRequest)
 
 - (instancetype)initWithUrl:(NSURL *)url {
     self = [super init];
@@ -25,6 +24,11 @@ di_inject(MainAssembly, HTTPRequest, imageRequest)
         _url = url;
     }
     return self;
+}
+
+- (void)loadUrl:(NSURL *)url
+{
+    
 }
 
 // TODO: When in view, display loading indicator, load image and then display it.

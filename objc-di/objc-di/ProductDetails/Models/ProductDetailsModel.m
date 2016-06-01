@@ -4,8 +4,6 @@
 
 #import "ProductDetailsModel.h"
 #import "di.h"
-#import "MainAssembly.h"
-#import "ShoppingCartAssembly.h"
 #import "User.h"
 #import "MetricsService.h"
 #import "ShoppingCartService.h"
@@ -24,9 +22,9 @@ di_property(ShoppingCartService, shoppingCartService)
 
 @implementation ProductDetailsModel
 
-di_inject(MainAssembly, MetricsService, metricsService)
-di_inject(MainAssembly, User, user)
-di_inject(ShoppingCartAssembly, ShoppingCartService, shoppingCartService) // ShoppingCartModel
+di_inject(MetricsService, metricsService)
+di_inject(User, user)
+di_inject(ShoppingCartService, shoppingCartService)
 
 - (instancetype)init {
     [self doesNotRecognizeSelector:_cmd];

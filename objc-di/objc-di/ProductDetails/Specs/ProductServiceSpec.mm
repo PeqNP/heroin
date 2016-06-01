@@ -1,11 +1,15 @@
 #import <Cedar/Cedar.h>
+#import "di.h"
 #import "ProductService.h"
-#import "MainAssembly.h"
 #import "MetricsService.h"
 #import "HTTPRequest.h"
-#import "di.h"
 #import "KSDeferred.h"
 #import "Product.h"
+
+@interface ProductService (SpecHelper)
+di_property(MetricsService, metricsService)
+di_property(HTTPRequest, secureRequest)
+@end
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
@@ -14,23 +18,17 @@ SPEC_BEGIN(ProductServiceSpec)
 
 describe(@"ProductService", ^{
     __block ProductService *subject;
-    __block MainAssembly *mainAssembly;
     __block MetricsService *metricsService;
     __block HTTPRequest *secureRequest;
 
     beforeEach(^{
-        metricsService = nice_fake_for([MetricsService class]);
-        secureRequest = nice_fake_for([HTTPRequest class]);
-        mainAssembly = di_fake_assembly(MainAssembly);
-        mainAssembly stub_method(@selector(metricsService)).and_return(metricsService);
-        mainAssembly stub_method(@selector(secureRequest)).and_return(secureRequest);
-        
         subject = [[ProductService alloc] init];
-    });
-    
-    afterEach(^{
-        // TODO: Remove.
-        di_unfake_assembly(MainAssembly);
+        
+        spy_on(subject);
+        metricsService = nice_fake_for([MetricsService class]);
+        subject stub_method(@selector(metricsService)).and_return(metricsService);
+        secureRequest = nice_fake_for([HTTPRequest class]);
+        subject stub_method(@selector(secureRequest)).and_return(secureRequest);
     });
     
     describe(@"fetch a product", ^{
@@ -51,7 +49,7 @@ describe(@"ProductService", ^{
                 product = value;
                 return value;
             } error:^id(NSError *value) {
-                error = error;
+                error = value;
                 return error;
             }];
         });
