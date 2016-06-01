@@ -5,12 +5,17 @@ A simple dependency injection pattern for Objective-C.
 Replace your DI framework with a single file consisting of ~6 lines of macro code. This dependency injection model does not use swizzling or any other run-time magic to provide dependency injection. It is extremely simple, yet provides the same feature set as most DI frameworks.
 
 By using this model you get:
-- Self documenting implementation files. The implementation file becomes the definition of which properties are injected. This provides a crystal clear, logical path to how depencies are wired into your dependent classes.
-- An extremely fast implementation. It does not use swizzling or any other run-time magic to provide DI. Code-gen is used to provide compile-time checks. This enables you to quickly identify issues at _compile_ time and avoid having issues where dependencies are wired incorrectly at run-time.
-- Can easily refactor classes. Many frameworks require you to update a method definition, if you use constructor initialization. This foregoes the need for constructor injection as well as any other "magic" dependency injection (such as annotating properties in comments), by requiring you to have visiiblity of the dependencies your classes require.
-- Macros to easily stub assemblies at test time when using the Cedar testing framework.
+- Self documenting implementation files. The implementation file becomes the definition of which properties are injected.
+- An extremely fast implementation. It does not use swizzling or any other run-time magic to provide DI.
+- An easy way to add, change or remove (refactor) classes. Many frameworks require you to update a method definition within the assembly, for a given dependency. If you use constructor initialization it's even more cumbersome as you have to change the definition for the init method within the assembly, the header and the implementation files. Changing a dependency is as simple as adding, or removing, the property that is being injected from within the implementation file.
 
-The pattern used by this project is referred to as a Service Locater. It does not use dependency inversion. Dependency inversion, by its nature, _hides_ where the dependency originates from. Dependency inversion simply says, "I need this thing. Give it me. I don't care where or how you do it." This pattern _requires_ you to know where you get your dependencies, which in turn require you to know the assemblies responsible for providing the dependency. This provides a much greater level of code clarity, which is necessary in large projects. Necessary, because as your project becomes larger, and more complex, dependencies are *much* more difficult to track where they originate from. In addition, this pattern has the side-effect of enforcing developers to think which dependencies should live in which assemblies as the developer will _see_ that they are asking for the dependency from the same assembly. Doing this shrinks your assemblies to contain only the dependencies it needs. This prevents God assemblies where every single dependency is in a single assembly.
+## How does it work?
+
+Macros are used to generate the property and implementation code which is used to request the respective dependency from a DI Service Locater. Typically a Service Locator is an anti-pattern in the context of DI. That being said, this specific pattern mitigates the anti-pattern entirely by providing a mapping layer which hides the assembly responsible for providing the dependency. In effect, this does exactly what all DI frameworks do.
+
+## The cons
+
+You must use a macro to code-gen the respective getter method within your implementation file. This is a single additional step all DI frameworks do not require. What offsets this con is that it produces less code necessary to inject the property, keeps the definition of the injected properties contained within a single file and removes a large dependency from your codebase.
 
 ## TODO
 
