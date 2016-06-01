@@ -16,14 +16,14 @@ describe(@"ProductService", ^{
     __block ProductService *subject;
     __block MainAssembly *mainAssembly;
     __block MetricsService *metricsService;
-    __block HTTPRequest *httpRequest;
+    __block HTTPRequest *secureRequest;
 
     beforeEach(^{
         metricsService = nice_fake_for([MetricsService class]);
-        httpRequest = nice_fake_for([HTTPRequest class]);
+        secureRequest = nice_fake_for([HTTPRequest class]);
         mainAssembly = di_fake_assembly(MainAssembly);
         mainAssembly stub_method(@selector(metricsService)).and_return(metricsService);
-        mainAssembly stub_method(@selector(httpRequest)).and_return(httpRequest);
+        mainAssembly stub_method(@selector(secureRequest)).and_return(secureRequest);
         
         subject = [[ProductService alloc] init];
     });
@@ -43,7 +43,7 @@ describe(@"ProductService", ^{
             error = nil;
             
             deferred = [KSDeferred defer];
-            httpRequest stub_method(@selector(request:post:)).and_return(deferred.promise);
+            secureRequest stub_method(@selector(request:post:)).and_return(deferred.promise);
         });
         
         subjectAction(^{
