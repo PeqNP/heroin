@@ -110,7 +110,6 @@
 		0739CABA1CEC372F006FDB07 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0739CABC1CEC372F006FDB07 /* Specs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
 		0739CABE1CEC372F006FDB07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		074E0FC31CEBDEF4005CC2F9 /* di.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = di.h; path = App/di.h; sourceTree = "<group>"; };
 		074E0FC91CEBE042005CC2F9 /* MetricsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetricsService.h; path = App/Services/MetricsService.h; sourceTree = "<group>"; };
 		074E0FCA1CEBE042005CC2F9 /* MetricsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetricsService.m; path = App/Services/MetricsService.m; sourceTree = "<group>"; };
 		074E0FCC1CEBE0C4005CC2F9 /* MainAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainAssembly.h; path = App/Assemblies/MainAssembly.h; sourceTree = "<group>"; };
@@ -122,7 +121,6 @@
 		07812E461CEF959B003F754D /* OnDemandImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnDemandImageView.m; path = Shared/Views/OnDemandImageView.m; sourceTree = "<group>"; };
 		07812E481CEF9A42003F754D /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = App.h; path = App/App.h; sourceTree = "<group>"; };
 		07812E491CEF9A42003F754D /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = App.m; path = App/App.m; sourceTree = "<group>"; };
-		07D3B4121CEC395300AFF33D /* DIAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIAssembly.h; path = App/DIAssembly.h; sourceTree = "<group>"; };
 		07D72EB91CEBDD100015080E /* objc-di.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-di.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D72EBD1CEBDD100015080E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07D72EBF1CEBDD100015080E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,6 +130,9 @@
 		07D72ECD1CEBDD110015080E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07DC3F6A1CFF9CEB008686FA /* DIServiceLocater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIServiceLocater.h; path = heroin/DIServiceLocater.h; sourceTree = "<group>"; };
 		07DC3F6B1CFF9CEB008686FA /* DIServiceLocater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DIServiceLocater.m; path = heroin/DIServiceLocater.m; sourceTree = "<group>"; };
+		07DC3F701D009228008686FA /* di.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = di.h; path = heroin/di.h; sourceTree = "<group>"; };
+		07DC3F711D009228008686FA /* DIAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIAssembly.h; path = heroin/DIAssembly.h; sourceTree = "<group>"; };
+		07DC3F721D00926B008686FA /* di-cedar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "di-cedar.h"; path = "heroin/di-cedar.h"; sourceTree = "<group>"; };
 		07E672F71CECB353006233A6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = App/Models/User.h; sourceTree = "<group>"; };
 		07E672F81CECB353006233A6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = App/Models/User.m; sourceTree = "<group>"; };
 		07FCC9A737B3122BC3D36203 /* Pods-objc-di.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objc-di.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objc-di/Pods-objc-di.debug.xcconfig"; sourceTree = "<group>"; };
@@ -296,14 +297,10 @@
 			children = (
 				07812E481CEF9A42003F754D /* App.h */,
 				07812E491CEF9A42003F754D /* App.m */,
-				074E0FC31CEBDEF4005CC2F9 /* di.h */,
-				07D3B4121CEC395300AFF33D /* DIAssembly.h */,
 				074E0FBC1CEBDE37005CC2F9 /* Assemblies */,
 				07E672F61CECB339006233A6 /* Models */,
 				074E0FBD1CEBDE87005CC2F9 /* Services */,
 				074E0FCF1CEBE226005CC2F9 /* Utilities */,
-				07DC3F6A1CFF9CEB008686FA /* DIServiceLocater.h */,
-				07DC3F6B1CFF9CEB008686FA /* DIServiceLocater.m */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -419,6 +416,7 @@
 		07D72EBB1CEBDD100015080E /* objc-di */ = {
 			isa = PBXGroup;
 			children = (
+				07DC3F6F1D0091FC008686FA /* heroin */,
 				074E0FB61CEBDDB9005CC2F9 /* App */,
 				070F3F2D1CEF652300574D27 /* ProductCatalog */,
 				074E0FB71CEBDDCF005CC2F9 /* ProductDetails */,
@@ -436,6 +434,18 @@
 				07D72EBD1CEBDD100015080E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07DC3F6F1D0091FC008686FA /* heroin */ = {
+			isa = PBXGroup;
+			children = (
+				07DC3F701D009228008686FA /* di.h */,
+				07DC3F721D00926B008686FA /* di-cedar.h */,
+				07DC3F711D009228008686FA /* DIAssembly.h */,
+				07DC3F6A1CFF9CEB008686FA /* DIServiceLocater.h */,
+				07DC3F6B1CFF9CEB008686FA /* DIServiceLocater.m */,
+			);
+			name = heroin;
 			sourceTree = "<group>";
 		};
 		07E672F61CECB339006233A6 /* Models */ = {
