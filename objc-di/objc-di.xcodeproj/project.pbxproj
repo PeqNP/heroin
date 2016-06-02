@@ -56,8 +56,8 @@
 		07D72EC11CEBDD100015080E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D72EC01CEBDD100015080E /* AppDelegate.m */; };
 		07D72EC91CEBDD110015080E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D72EC81CEBDD110015080E /* Assets.xcassets */; };
 		07D72ECC1CEBDD110015080E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D72ECA1CEBDD110015080E /* LaunchScreen.storyboard */; };
-		07DC3F6C1CFF9CEB008686FA /* DIServiceLocater.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC3F6B1CFF9CEB008686FA /* DIServiceLocater.m */; };
-		07DC3F6D1CFF9CEB008686FA /* DIServiceLocater.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC3F6B1CFF9CEB008686FA /* DIServiceLocater.m */; };
+		07DC3F751D00967A008686FA /* DIServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC3F741D00967A008686FA /* DIServiceLocator.m */; };
+		07DC3F761D00967A008686FA /* DIServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC3F741D00967A008686FA /* DIServiceLocator.m */; };
 		07E672F91CECB353006233A6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E672F81CECB353006233A6 /* User.m */; };
 		07E672FA1CECB353006233A6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E672F81CECB353006233A6 /* User.m */; };
 		4195E6BAB9E99778541A671A /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 398E28708AFB6DDB27FB940E /* libPods-Specs.a */; };
@@ -128,11 +128,11 @@
 		07D72EC81CEBDD110015080E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07D72ECB1CEBDD110015080E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D72ECD1CEBDD110015080E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07DC3F6A1CFF9CEB008686FA /* DIServiceLocater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIServiceLocater.h; path = heroin/DIServiceLocater.h; sourceTree = "<group>"; };
-		07DC3F6B1CFF9CEB008686FA /* DIServiceLocater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DIServiceLocater.m; path = heroin/DIServiceLocater.m; sourceTree = "<group>"; };
 		07DC3F701D009228008686FA /* di.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = di.h; path = heroin/di.h; sourceTree = "<group>"; };
 		07DC3F711D009228008686FA /* DIAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIAssembly.h; path = heroin/DIAssembly.h; sourceTree = "<group>"; };
 		07DC3F721D00926B008686FA /* di-cedar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "di-cedar.h"; path = "heroin/di-cedar.h"; sourceTree = "<group>"; };
+		07DC3F731D00967A008686FA /* DIServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIServiceLocator.h; path = heroin/DIServiceLocator.h; sourceTree = "<group>"; };
+		07DC3F741D00967A008686FA /* DIServiceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DIServiceLocator.m; path = heroin/DIServiceLocator.m; sourceTree = "<group>"; };
 		07E672F71CECB353006233A6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = App/Models/User.h; sourceTree = "<group>"; };
 		07E672F81CECB353006233A6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = App/Models/User.m; sourceTree = "<group>"; };
 		07FCC9A737B3122BC3D36203 /* Pods-objc-di.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objc-di.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objc-di/Pods-objc-di.debug.xcconfig"; sourceTree = "<group>"; };
@@ -442,8 +442,8 @@
 				07DC3F701D009228008686FA /* di.h */,
 				07DC3F721D00926B008686FA /* di-cedar.h */,
 				07DC3F711D009228008686FA /* DIAssembly.h */,
-				07DC3F6A1CFF9CEB008686FA /* DIServiceLocater.h */,
-				07DC3F6B1CFF9CEB008686FA /* DIServiceLocater.m */,
+				07DC3F731D00967A008686FA /* DIServiceLocator.h */,
+				07DC3F741D00967A008686FA /* DIServiceLocator.m */,
 			);
 			name = heroin;
 			sourceTree = "<group>";
@@ -694,7 +694,6 @@
 				070F3F251CEF56ED00574D27 /* ProductService.m in Sources */,
 				070F3F3E1CEF6C4E00574D27 /* BannerNotification.m in Sources */,
 				072A8D8E1CF3614D00D87541 /* ProductImagesDataSource.m in Sources */,
-				07DC3F6D1CFF9CEB008686FA /* DIServiceLocater.m in Sources */,
 				070F3EDD1CEE0AA200574D27 /* ProductDetailsViewModelSpec.mm in Sources */,
 				070F3EE21CEE0D3300574D27 /* ProductDetailsViewController.m in Sources */,
 				07E672FA1CECB353006233A6 /* User.m in Sources */,
@@ -703,6 +702,7 @@
 				070F3F4E1CEF6DC800574D27 /* SKU.m in Sources */,
 				070F3F4C1CEF6DC800574D27 /* ReservationConfirmation.m in Sources */,
 				07D3B4101CEC385C00AFF33D /* MetricsService.m in Sources */,
+				07DC3F761D00967A008686FA /* DIServiceLocator.m in Sources */,
 				070F3F481CEF6DC800574D27 /* CustomerReview.m in Sources */,
 				070F3F061CEE450F00574D27 /* ShoppingCartAssembly.m in Sources */,
 				070F3F321CEF655500574D27 /* ProductCatalogViewController.m in Sources */,
@@ -728,6 +728,7 @@
 				070F3EE11CEE0D3300574D27 /* ProductDetailsViewController.m in Sources */,
 				070F3F241CEF56ED00574D27 /* ProductService.m in Sources */,
 				07812E4A1CEF9A42003F754D /* App.m in Sources */,
+				07DC3F751D00967A008686FA /* DIServiceLocator.m in Sources */,
 				072A8D8D1CF3614D00D87541 /* ProductImagesDataSource.m in Sources */,
 				070F3F111CEE619F00574D27 /* SKUThumbnailViewModel.m in Sources */,
 				070F3F4D1CEF6DC800574D27 /* SKU.m in Sources */,
@@ -738,7 +739,6 @@
 				070F3F311CEF655500574D27 /* ProductCatalogViewController.m in Sources */,
 				07D72EC11CEBDD100015080E /* AppDelegate.m in Sources */,
 				070F3F051CEE450F00574D27 /* ShoppingCartAssembly.m in Sources */,
-				07DC3F6C1CFF9CEB008686FA /* DIServiceLocater.m in Sources */,
 				07D72EBE1CEBDD100015080E /* main.m in Sources */,
 				070F3F471CEF6DC800574D27 /* CustomerReview.m in Sources */,
 			);

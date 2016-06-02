@@ -2,20 +2,24 @@
  Copyright (c) 2016 Upstart Illustration LLC. All rights reserved.
  */
 
-#import "DIServiceLocater.h"
+#import <objc/runtime.h>
 
-@interface DIServiceLocater ()
-@property (nonatomic, strong) NSMutableArray<id<DIAssembly>> *assemblies;
+#import "DIServiceLocator.h"
+
+#define EXCLUDED_PROPERTIES @[@"hash", @"superclass", @"description", @"debugDescription"]
+
+@interface DIServiceLocator ()
+@property (nonatomic, strong) NSMutableDictionary<NSString*, id<DIAssembly>> *dependencies;
 @end
 
-static DIServiceLocater *sInstance;
+static DIServiceLocator *sInstance;
 
-@implementation DIServiceLocater
+@implementation DIServiceLocator
 
 + (instancetype)getInstance
 {
     if (!sInstance) {
-        sInstance = [[DIServiceLocater alloc] init];
+        sInstance = [[DIServiceLocator alloc] init];
     }
     return sInstance;
 }
@@ -28,11 +32,9 @@ static DIServiceLocater *sInstance;
     [[self getInstance] registerAssembly:assembly];
 }
 
-+ (id)getDependency:(Class)classRef
++ (id)getDependency:(NSString *)dependency
 {
-    // TODO: Return the dependnecy which maps to the given class.
-    // TODO: Instead of class, use selector as key. If selector does not exist on any assembly, throw Exception.
-    return nil;
+    return [[self getInstance] getDependency:dependency];
 }
 
 #pragma mark - Private
@@ -41,16 +43,60 @@ static DIServiceLocater *sInstance;
 {
     self = [super init];
     if (self) {
-        _assemblies = [NSMutableArray array];
+        _dependencies = [NSMutableDictionary dictionary];
     }
     return self;
 }
 
+- (NSArray<NSString *> *)propertiesForAssembly:(id<DIAssembly>)assembly
+{
+    unsigned count;
+    objc_property_t *properties = class_copyPropertyList([(NSObject *)assembly class], &count);
+    
+    NSMutableArray<NSString *> *rv = [NSMutableArray array];
+    
+    unsigned i;
+    for (i = 0; i < count; i++) {
+        objc_property_t property = properties[i];
+        NSString *name = [NSString stringWithUTF8String:property_getName(property)];
+        if (![EXCLUDED_PROPERTIES containsObject:name]) {
+            [rv addObject:name];
+        }
+    }
+    
+    free(properties);
+    
+    return rv;
+}
+
 - (void)registerAssembly:(id<DIAssembly>)assembly
 {
-    // TODO: Register all methods associated to assembly to create tree which provides a given dependency.
-    // If there is a duplicate depenency, call it out here.
-    [self.assemblies addObject:assembly];
+    NSArray<NSString *> *properties = [self propertiesForAssembly:assembly];
+    for (NSString *property in properties) {
+        id<DIAssembly> existingAssembly = [self.dependencies objectForKey:property];
+        if (existingAssembly) {
+            NSString *error = [NSString stringWithFormat:@"The assembly (%@) contains dependency (%@) which is already provided by assembly (%@).", NSStringFromClass([(NSObject *)assembly class]), property, NSStringFromClass([(NSObject *)existingAssembly class])];
+            NSAssert(false, error);
+        }
+        else {
+            [self.dependencies setObject:assembly forKey:property];
+        }
+    }
+}
+
+- (id)getDependency:(NSString *)dependency
+{
+    id<DIAssembly> assembly = [self.dependencies valueForKey:dependency];
+    if (assembly) {
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        id instance = [(NSObject *)assembly performSelector:NSSelectorFromString(dependency)];
+        #pragma clang diagnostic pop
+        return instance;
+    }
+    NSString *error = [NSString stringWithFormat:@"Assembly which provides dependency for %@ has not been registered.", dependency];
+    NSAssert(false, error);
+    return nil;
 }
 
 @end

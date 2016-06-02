@@ -25,7 +25,7 @@ di_inject(ProductService, productService)
         @throw [NSException exceptionWithName:@"Double Invocation" reason:@"Attempting to init app more than once" userInfo:@{NSLocalizedDescriptionKey: @"Attempting to init app more than once. Stop it!"}];
     }
     
-    [DIServiceLocater registerAssembly:[[MainAssembly alloc] initWithConfiguration:config]];
+    [DIServiceLocator registerAssembly:[[MainAssembly alloc] initWithConfiguration:config]];
     
     sInstance = [[App alloc] init];
     return sInstance;

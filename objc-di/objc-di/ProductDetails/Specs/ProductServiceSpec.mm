@@ -1,6 +1,5 @@
 #import <Cedar/Cedar.h>
 #import "di-cedar.h"
-#import "DIServiceLocater.h"
 #import "ProductService.h"
 #import "MetricsService.h"
 #import "HTTPRequest.h"
@@ -29,9 +28,8 @@ describe(@"ProductService", ^{
         
         metricsService = nice_fake_for([MetricsService class]);
         di_stub_sl(metricsService);
-        subject stub_method(@selector(metricsService)).and_return(metricsService);
         secureRequest = nice_fake_for([HTTPRequest class]);
-        subject stub_method(@selector(secureRequest)).and_return(secureRequest);
+        di_stub_sl(secureRequest);
     });
     
     afterEach(^{

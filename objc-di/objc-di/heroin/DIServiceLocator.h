@@ -6,9 +6,9 @@
 
 @protocol DIAssembly;
 
-@interface DIServiceLocater : NSObject
+@interface DIServiceLocator : NSObject
 
 + (void)registerAssembly:(id<DIAssembly>)assembly;
-+ (id)getDependency:(Class)classRef;
++ (id)getDependency:(NSString *)dependency;
 
 @end
