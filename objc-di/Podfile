@@ -3,10 +3,12 @@ workspace 'objc-di'
 target 'objc-di' do
     pod 'KSDeferred'
     pod 'ReactiveCocoa', '~> 2'
+    pod 'Hydrant', '~>1.0.0'
 end
 
 target 'Specs' do
-    pod 'KSDeferred'
     pod 'Cedar'
+    pod 'KSDeferred'
     pod 'ReactiveCocoa', '~> 2'
+    pod 'Hydrant', '~>1.0.0'
 end
