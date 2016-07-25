@@ -121,6 +121,7 @@
 		07812E461CEF959B003F754D /* OnDemandImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnDemandImageView.m; path = Shared/Views/OnDemandImageView.m; sourceTree = "<group>"; };
 		07812E481CEF9A42003F754D /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = App.h; path = App/App.h; sourceTree = "<group>"; };
 		07812E491CEF9A42003F754D /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = App.m; path = App/App.m; sourceTree = "<group>"; };
+		07A876811D466B9800E179D5 /* DIServiceLocator+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DIServiceLocator+Private.h"; path = "heroin/DIServiceLocator+Private.h"; sourceTree = "<group>"; };
 		07D72EB91CEBDD100015080E /* objc-di.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-di.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D72EBD1CEBDD100015080E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07D72EBF1CEBDD100015080E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -444,6 +445,7 @@
 				07DC3F711D009228008686FA /* DIAssembly.h */,
 				07DC3F731D00967A008686FA /* DIServiceLocator.h */,
 				07DC3F741D00967A008686FA /* DIServiceLocator.m */,
+				07A876811D466B9800E179D5 /* DIServiceLocator+Private.h */,
 			);
 			name = heroin;
 			sourceTree = "<group>";

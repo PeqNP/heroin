@@ -7,16 +7,13 @@
 #ifndef di_cedar_h
 #define di_cedar_h
 
+#import "DIServiceLocator+Private.h"
 #import "di.h"
 
-/** TODO: convert these into methods and do not require the consumer to need to unspy. **/
-#define di_spy_sl() \
-spy_on([DIServiceLocator class])
-
-#define di_unspy_sl() \
-stop_spying_on([DIServiceLocator class])
+#define di_fake() \
+[DIServiceLocator setInstance:nice_fake_for([DIServiceLocator class])];
 
 #define di_stub_sl(PROPERTY_NAME) \
-[DIServiceLocator class] stub_method(@selector(getDependency:)).with(@OS_STRINGIFY(PROPERTY_NAME)).and_return(PROPERTY_NAME)
+[DIServiceLocator getInstance] stub_method(@selector(getDependency:)).with(@OS_STRINGIFY(PROPERTY_NAME)).and_return(PROPERTY_NAME)
 
 #endif /* di_cedar_h */

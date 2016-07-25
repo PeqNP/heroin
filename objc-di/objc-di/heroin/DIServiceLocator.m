@@ -16,6 +16,11 @@ static DIServiceLocator *sInstance;
 
 @implementation DIServiceLocator
 
++ (void)setInstance:(DIServiceLocator *)serviceLocator
+{
+    sInstance = serviceLocator;
+}
+
 + (instancetype)getInstance
 {
     if (!sInstance) {
