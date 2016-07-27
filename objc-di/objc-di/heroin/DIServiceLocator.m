@@ -37,6 +37,11 @@ static DIServiceLocator *sInstance;
     [[self getInstance] registerAssembly:assembly];
 }
 
++ (void)unregisterAssembly:(id<DIAssembly>)assembly
+{
+    [[self getInstance] unregisterAssembly:assembly];
+}
+
 + (id)getDependency:(NSString *)dependency
 {
     return [[self getInstance] getDependency:dependency];
@@ -85,6 +90,17 @@ static DIServiceLocator *sInstance;
         }
         else {
             [self.dependencies setObject:assembly forKey:property];
+        }
+    }
+}
+
+- (void)unregisterAssembly:(id<DIAssembly>)assembly
+{
+    // TODO: Test
+    NSDictionary<NSString*, id<DIAssembly>> *dependencies = [self.dependencies copy];
+    for (NSString *property in dependencies) {
+        if ([self.dependencies objectForKey:property] == assembly) {
+            [self.dependencies removeObjectForKey:property];
         }
     }
 }

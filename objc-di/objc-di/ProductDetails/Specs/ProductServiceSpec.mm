@@ -27,9 +27,9 @@ describe(@"ProductService", ^{
         di_fake();
         
         metricsService = nice_fake_for([MetricsService class]);
-        di_stub_sl(metricsService);
+        di_stub(metricsService);
         secureRequest = nice_fake_for([HTTPRequest class]);
-        di_stub_sl(secureRequest);
+        di_stub(secureRequest);
     });
     
     describe(@"fetch a product", ^{

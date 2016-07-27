@@ -9,6 +9,7 @@
 @interface DIServiceLocator : NSObject
 
 + (void)registerAssembly:(id<DIAssembly>)assembly;
++ (void)unregisterAssembly:(id<DIAssembly>)assembly;
 + (id)getDependency:(NSString *)dependency;
 
 @end
