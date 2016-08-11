@@ -4,7 +4,7 @@
 
 #import "App.h"
 #import "di.h"
-#import "MainAssembly.h"
+#import "MainServiceContainer.h"
 #import "ProductService.h"
 #import "ProductDetailsModel.h"
 
@@ -25,7 +25,7 @@ di_inject(ProductService, productService)
         @throw [NSException exceptionWithName:@"Double Invocation" reason:@"Attempting to init app more than once" userInfo:@{NSLocalizedDescriptionKey: @"Attempting to init app more than once. Stop it!"}];
     }
     
-    [DIServiceLocator registerAssembly:[[MainAssembly alloc] initWithConfiguration:config]];
+    [DIServiceLocator registerContainer:[[MainServiceContainer alloc] initWithConfiguration:config]];
     
     sInstance = [[App alloc] init];
     return sInstance;

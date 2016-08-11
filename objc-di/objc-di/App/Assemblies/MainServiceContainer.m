@@ -2,13 +2,13 @@
  Copyright (c) 2016 Upstart Illustration LLC. All rights reserved.
  */
 
-#import "MainAssembly.h"
+#import "MainServiceContainer.h"
 #import "HTTPRequest.h"
 #import "MetricsService.h"
 #import "User.h"
 #import "ProductService.h"
 
-@interface MainAssembly ()
+@interface MainServiceContainer ()
 @property (nonatomic, strong) HTTPRequest *secureRequest;
 @property (nonatomic, strong) HTTPRequest *imageRequest;
 @property (nonatomic, strong) MetricsService *metricsService;
@@ -16,7 +16,7 @@
 @property (nonatomic, strong) User *user;
 @end
 
-@implementation MainAssembly
+@implementation MainServiceContainer
 
 - (instancetype)initWithConfiguration:(NSDictionary *)config {
     self = [super init];

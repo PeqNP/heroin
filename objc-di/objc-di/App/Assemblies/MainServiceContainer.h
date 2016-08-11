@@ -14,7 +14,7 @@
 @class ProductService;
 @class User;
 
-@interface MainAssembly : NSObject <DIServiceContainer>
+@interface MainServiceContainer : NSObject <DIServiceContainer>
 
 @property (nonatomic, strong, readonly) HTTPRequest *secureRequest;
 @property (nonatomic, strong, readonly) HTTPRequest *imageRequest;

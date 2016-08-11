@@ -7,7 +7,7 @@
 
 @class ShoppingCartService;
 
-@interface ShoppingCartAssembly : NSObject <DIServiceContainer>
+@interface ShoppingCartServiceContainer : NSObject <DIServiceContainer>
 
 @property (nonatomic, strong, readonly) ShoppingCartService *shoppingCartService;
 

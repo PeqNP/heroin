@@ -2,17 +2,18 @@
  Copyright (c) 2016 Upstart Illustration LLC. All rights reserved.
  */
 
-#import "ShoppingCartAssembly.h"
+#import "ShoppingCartServiceContainer.h"
+#import "di.h"
 
-@interface ShoppingCartAssembly ()
+@interface ShoppingCartServiceContainer ()
 @property (nonatomic, strong) ShoppingCartService *shoppingCartService;
 @end
 
-static ShoppingCartAssembly *sInstance;
+static ShoppingCartServiceContainer *sInstance;
 
-@implementation ShoppingCartAssembly
+@implementation ShoppingCartServiceContainer
 
-#pragma mark - DIAssembly
+
 
 + (instancetype)getInstance {
     return sInstance;
