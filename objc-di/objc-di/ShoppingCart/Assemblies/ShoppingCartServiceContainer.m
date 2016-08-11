@@ -3,7 +3,6 @@
  */
 
 #import "ShoppingCartServiceContainer.h"
-#import "di.h"
 
 @interface ShoppingCartServiceContainer ()
 @property (nonatomic, strong) ShoppingCartService *shoppingCartService;
@@ -12,8 +11,6 @@
 static ShoppingCartServiceContainer *sInstance;
 
 @implementation ShoppingCartServiceContainer
-
-
 
 + (instancetype)getInstance {
     return sInstance;
