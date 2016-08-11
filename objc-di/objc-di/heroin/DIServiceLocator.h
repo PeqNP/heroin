@@ -4,12 +4,12 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DIAssembly;
+@protocol DIServiceContainer;
 
 @interface DIServiceLocator : NSObject
 
-+ (void)registerAssembly:(id<DIAssembly>)assembly;
-+ (void)unregisterAssembly:(id<DIAssembly>)assembly;
++ (void)registerContainer:(id<DIServiceContainer>)container;
++ (void)unregisterContainer:(id<DIServiceContainer>)container;
 + (id)getDependency:(NSString *)dependency;
 
 @end

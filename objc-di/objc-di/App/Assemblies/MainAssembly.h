@@ -7,14 +7,14 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "DIAssembly.h"
+#import "DIServiceContainer.h"
 
 @class HTTPRequest;
 @class MetricsService;
 @class ProductService;
 @class User;
 
-@interface MainAssembly : NSObject <DIAssembly>
+@interface MainAssembly : NSObject <DIServiceContainer>
 
 @property (nonatomic, strong, readonly) HTTPRequest *secureRequest;
 @property (nonatomic, strong, readonly) HTTPRequest *imageRequest;

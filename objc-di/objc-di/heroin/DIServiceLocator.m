@@ -9,7 +9,7 @@
 #define EXCLUDED_PROPERTIES @[@"hash", @"superclass", @"description", @"debugDescription"]
 
 @interface DIServiceLocator ()
-@property (nonatomic, strong) NSMutableDictionary<NSString*, id<DIAssembly>> *dependencies;
+@property (nonatomic, strong) NSMutableDictionary<NSString*, id<DIServiceContainer>> *dependencies;
 @end
 
 static DIServiceLocator *sInstance;
@@ -31,15 +31,15 @@ static DIServiceLocator *sInstance;
 
 #pragma mark - Public
 
-+ (void)registerAssembly:(id<DIAssembly>)assembly
++ (void)registerContainer:(id<DIServiceContainer>)container
 {
-    // TODO: Assert if assembly has already been registered?
-    [[self getInstance] registerAssembly:assembly];
+    // TODO: Assert if container has already been registered?
+    [[self getInstance] registerContainer:container];
 }
 
-+ (void)unregisterAssembly:(id<DIAssembly>)assembly
++ (void)unregisterContainer:(id<DIServiceContainer>)container
 {
-    [[self getInstance] unregisterAssembly:assembly];
+    [[self getInstance] unregisterContainer:container];
 }
 
 + (id)getDependency:(NSString *)dependency
@@ -58,10 +58,10 @@ static DIServiceLocator *sInstance;
     return self;
 }
 
-- (NSArray<NSString *> *)propertiesForAssembly:(id<DIAssembly>)assembly
+- (NSArray<NSString *> *)propertiesForContainer:(id<DIServiceContainer>)container
 {
     unsigned count;
-    objc_property_t *properties = class_copyPropertyList([(NSObject *)assembly class], &count);
+    objc_property_t *properties = class_copyPropertyList([(NSObject *)container class], &count);
     
     NSMutableArray<NSString *> *rv = [NSMutableArray array];
     
@@ -79,27 +79,27 @@ static DIServiceLocator *sInstance;
     return rv;
 }
 
-- (void)registerAssembly:(id<DIAssembly>)assembly
+- (void)registerContainer:(id<DIServiceContainer>)container
 {
-    NSArray<NSString *> *properties = [self propertiesForAssembly:assembly];
+    NSArray<NSString *> *properties = [self propertiesForContainer:container];
     for (NSString *property in properties) {
-        id<DIAssembly> existingAssembly = [self.dependencies objectForKey:property];
-        if (existingAssembly) {
-            NSString *error = [NSString stringWithFormat:@"The assembly (%@) contains dependency (%@) which is already provided by assembly (%@).", NSStringFromClass([(NSObject *)assembly class]), property, NSStringFromClass([(NSObject *)existingAssembly class])];
+        id<DIServiceContainer> existingContainer = [self.dependencies objectForKey:property];
+        if (existingContainer) {
+            NSString *error = [NSString stringWithFormat:@"The container (%@) contains dependency (%@) which is already provided by container (%@).", NSStringFromClass([(NSObject *)container class]), property, NSStringFromClass([(NSObject *)existingContainer class])];
             NSAssert(false, error);
         }
         else {
-            [self.dependencies setObject:assembly forKey:property];
+            [self.dependencies setObject:container forKey:property];
         }
     }
 }
 
-- (void)unregisterAssembly:(id<DIAssembly>)assembly
+- (void)unregisterContainer:(id<DIServiceContainer>)container
 {
     // TODO: Test
-    NSDictionary<NSString*, id<DIAssembly>> *dependencies = [self.dependencies copy];
+    NSDictionary<NSString*, id<DIServiceContainer>> *dependencies = [self.dependencies copy];
     for (NSString *property in dependencies) {
-        if ([self.dependencies objectForKey:property] == assembly) {
+        if ([self.dependencies objectForKey:property] == container) {
             [self.dependencies removeObjectForKey:property];
         }
     }
@@ -107,15 +107,15 @@ static DIServiceLocator *sInstance;
 
 - (id)getDependency:(NSString *)dependency
 {
-    id<DIAssembly> assembly = [self.dependencies valueForKey:dependency];
-    if (assembly) {
+    id<DIServiceContainer> container = [self.dependencies valueForKey:dependency];
+    if (container) {
         #pragma clang diagnostic push
         #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        id instance = [(NSObject *)assembly performSelector:NSSelectorFromString(dependency)];
+        id instance = [(NSObject *)container performSelector:NSSelectorFromString(dependency)];
         #pragma clang diagnostic pop
         return instance;
     }
-    NSString *error = [NSString stringWithFormat:@"Assembly which provides dependency for %@ has not been registered.", dependency];
+    NSString *error = [NSString stringWithFormat:@"Container which provides dependency for %@ has not been registered.", dependency];
     NSAssert(false, error);
     return nil;
 }

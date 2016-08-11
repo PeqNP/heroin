@@ -3,11 +3,11 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "DIAssembly.h"
+#import "DIServiceContainer.h"
 
 @class ShoppingCartService;
 
-@interface ShoppingCartAssembly : NSObject <DIAssembly>
+@interface ShoppingCartAssembly : NSObject <DIServiceContainer>
 
 @property (nonatomic, strong, readonly) ShoppingCartService *shoppingCartService;
 

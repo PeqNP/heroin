@@ -130,7 +130,7 @@
 		07D72ECB1CEBDD110015080E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D72ECD1CEBDD110015080E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07DC3F701D009228008686FA /* di.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = di.h; path = heroin/di.h; sourceTree = "<group>"; };
-		07DC3F711D009228008686FA /* DIAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIAssembly.h; path = heroin/DIAssembly.h; sourceTree = "<group>"; };
+		07DC3F711D009228008686FA /* DIServiceContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIServiceContainer.h; path = heroin/DIServiceContainer.h; sourceTree = "<group>"; };
 		07DC3F721D00926B008686FA /* di-cedar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "di-cedar.h"; path = "heroin/di-cedar.h"; sourceTree = "<group>"; };
 		07DC3F731D00967A008686FA /* DIServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIServiceLocator.h; path = heroin/DIServiceLocator.h; sourceTree = "<group>"; };
 		07DC3F741D00967A008686FA /* DIServiceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DIServiceLocator.m; path = heroin/DIServiceLocator.m; sourceTree = "<group>"; };
@@ -442,7 +442,7 @@
 			children = (
 				07DC3F701D009228008686FA /* di.h */,
 				07DC3F721D00926B008686FA /* di-cedar.h */,
-				07DC3F711D009228008686FA /* DIAssembly.h */,
+				07DC3F711D009228008686FA /* DIServiceContainer.h */,
 				07DC3F731D00967A008686FA /* DIServiceLocator.h */,
 				07DC3F741D00967A008686FA /* DIServiceLocator.m */,
 				07A876811D466B9800E179D5 /* DIServiceLocator+Private.h */,

@@ -5,5 +5,5 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DIAssembly <NSObject>
+@protocol DIServiceContainer <NSObject>
 @end
