@@ -5,11 +5,10 @@ Heroin is an extremely small dependency injection library, composed of two macro
 
 ## Benefits
 
-- Self documenting implementation files. The implementation file becomes the definition for which properties are injected.
+- Provide a declarative syntax, when declaring dependencies, in the interface. The implementation file becomes the definition for which properties are injected.
 - An extremely fast implementation. It does not use swizzling or any other run-time magic to provide DI.
 - An easy way to add, change or remove (refactor) classes. Many frameworks require you to update a method definition within the assembly, for a given dependency. If you use constructor initialization it's even more cumbersome as you have to change the definition for the init method within the assembly, the header and the implementation files. Changing a dependency is as simple as adding, or removing, the property that is being injected from within the implementation file.
 - Provide a library that can be understood by anyone in about 15 minutes. Our projects are already large and complex enough. Having a complex DI library to add into the mix only makes some debugging tasks much more difficult.
-- Provide a declarative syntax, when declaring dependencies, in the interface. When looking at an interface it should be obvious which properties are a dependency.
 - No configuration. The only configuration that your project should have is the configuration of the individual dependencies themselves. It should _not_ be necessary to configure the DI library.
 - Tests must ensure that the dependency is being injected. Tests _must_ ensure that the class asks the DI for its respective dependency(ies). Because most DI frameworks are very large, require a lot of setup, and therefore slow down tests when they have to initialize the DI, most tests leave out this very important step. The result is that your tests pass without error, but at run-time the app exhibits unintended behavior (crashing, no-op, etc.).
 
