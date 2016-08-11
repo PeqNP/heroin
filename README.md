@@ -3,6 +3,10 @@
 
 Heroin is an extremely small dependency injection library, composed of two macros (~10 lines of code) and a single class to manage dependencies.
 
+## Installation
+
+Download and copy the 'heroin' folder in the root directory of your project. Include all files into your project.
+
 ## Benefits
 
 - Provide a declarative syntax, when declaring dependencies, in the interface. The implementation file becomes the definition for which properties are injected.
