@@ -28,4 +28,9 @@
     return [DIServiceLocator getDependency:@OS_STRINGIFY(PROPERTY_NAME)]; \
 }
 
+#define di_inject_alias(PROPERTY_TYPE, PROPERTY_NAME, PROPERTY_ALIAS) \
+- (PROPERTY_TYPE *)PROPERTY_ALIAS { \
+return [DIServiceLocator getDependency:@OS_STRINGIFY(PROPERTY_NAME)]; \
+}
+
 #endif /* di_h */

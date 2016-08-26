@@ -14,6 +14,6 @@
 [DIServiceLocator setInstance:nice_fake_for([DIServiceLocator class])];
 
 #define di_stub(PROPERTY_NAME) \
-[DIServiceLocator getInstance] stub_method(@selector(getDependency:)).with(@OS_STRINGIFY(PROPERTY_NAME)).and_return(PROPERTY_NAME)
+[DIServiceLocator getInstance] stub_method(@selector(getDependency:)).with(@OS_STRINGIFY(PROPERTY_NAME)).and_return(PROPERTY_NAME);
 
 #endif /* di_cedar_h */
