@@ -13,14 +13,14 @@
 #define di_inject_typhoon(PROPERTY_TYPE, PROPERTY_NAME) \
 - (PROPERTY_TYPE *)PROPERTY_NAME { \
     return [TyphoonDefinition withFactory:[DIServiceLocator class] selector:@selector(getDependency:) parameters:^(TyphoonMethod *factoryMethod) { \
-            [factoryMethod injectParameterWith:OS_STRINGIFY(PROPERTY_NAME)]; \
+            [factoryMethod injectParameterWith:@OS_STRINGIFY(PROPERTY_NAME)]; \
         }]; \
 }
 
 #define di_inject_alias_typhoon(PROPERTY_TYPE, PROPERTY_NAME, ALIAS_NAME) \
 - (PROPERTY_TYPE *)PROPERTY_ALIAS { \
     return [TyphoonDefinition withFactory:[DIServiceLocator class] selector:@selector(getDependency:) parameters:^(TyphoonMethod *factoryMethod) { \
-            [factoryMethod injectParameterWith:OS_STRINGIFY(PROPERTY_NAME)]; \
+            [factoryMethod injectParameterWith:@OS_STRINGIFY(PROPERTY_NAME)]; \
         }]; \
 }
 
