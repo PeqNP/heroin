@@ -24,12 +24,12 @@ describe(@"ProductService", ^{
     beforeEach(^{
         subject = [[ProductService alloc] init];
         
-        di_fake();
+        di_fake()
         
         metricsService = nice_fake_for([MetricsService class]);
-        di_stub(metricsService);
+        di_stub(metricsService)
         secureRequest = nice_fake_for([HTTPRequest class]);
-        di_stub(secureRequest);
+        di_stub(secureRequest)
     });
     
     describe(@"fetch a product", ^{

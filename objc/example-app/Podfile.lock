@@ -1,5 +1,6 @@
 PODS:
   - Cedar (1.0)
+  - Hydrant (1.0.1)
   - KSDeferred (0.3.1)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -11,11 +12,13 @@ PODS:
 
 DEPENDENCIES:
   - Cedar
+  - Hydrant (~> 1.0.0)
   - KSDeferred
   - ReactiveCocoa (~> 2)
 
 SPEC CHECKSUMS:
   Cedar: a641e5ed0353bd9d45782ce365d0822b7342cce3
+  Hydrant: 4a12198ac7b6b1d0f9627720b9de22624e19ff43
   KSDeferred: 45c9bd1dcf4ece146ea23bd8d9605c41e19458b1
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
