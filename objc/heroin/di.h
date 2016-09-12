@@ -22,6 +22,9 @@
 #define di_property(PROPERTY_TYPE, PROPERTY_NAME) \
 @property (nonatomic, strong, readonly) PROPERTY_TYPE *PROPERTY_NAME;
 
+#define di_method(PROPERTY_TYPE, PROPERTY_NAME) \
+- (PROPERTY_TYPE *)PROPERTY_NAME;
+
 /** Code gen getter method to return property's depenency. */
 #define di_inject(PROPERTY_TYPE, PROPERTY_NAME) \
 - (PROPERTY_TYPE *)PROPERTY_NAME { \
