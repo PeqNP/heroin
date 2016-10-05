@@ -18,16 +18,25 @@
 
 #import "DIServiceLocator.h"
 
-/** Create property that will be injected with the required memory accessors. */
+/** (Optional) Convenience macro which creates a property that will be injected with the required memory accessors. Note: If you not define the property you will not get auto-complete in Xcode. */
 #define di_property(PROPERTY_TYPE, PROPERTY_NAME) \
 @property (nonatomic, strong, readonly) PROPERTY_TYPE *PROPERTY_NAME;
 
+#define di_property_protocol(PROPERTY_TYPE, PROPERTY_NAME) \
+@property (nonatomic, strong, readonly) id<PROPERTY_TYPE> PROPERTY_NAME;
+
+/** (Optional) Convenience macro to call out an injected property's getter method. */
 #define di_method(PROPERTY_TYPE, PROPERTY_NAME) \
 - (PROPERTY_TYPE *)PROPERTY_NAME;
 
-/** Code gen getter method to return property's depenency. */
+/** (Required) Code generates the property's getter method used to return the respective dependency. */
 #define di_inject(PROPERTY_TYPE, PROPERTY_NAME) \
 - (PROPERTY_TYPE *)PROPERTY_NAME { \
+    return [DIServiceLocator getDependency:@OS_STRINGIFY(PROPERTY_NAME)]; \
+}
+
+#define di_inject_protocol(PROPERTY_TYPE, PROPERTY_NAME) \
+- (id<PROPERTY_TYPE>)PROPERTY_NAME { \
     return [DIServiceLocator getDependency:@OS_STRINGIFY(PROPERTY_NAME)]; \
 }
 

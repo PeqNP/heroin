@@ -85,7 +85,7 @@ static DIServiceLocator *sInstance;
     for (NSString *property in properties) {
         id<DIServiceContainer> existingContainer = [self.dependencies objectForKey:property];
         if (existingContainer) {
-            NSString *error = [NSString stringWithFormat:@"The container (%@) contains dependency (%@) which is already provided by container (%@).", NSStringFromClass([(NSObject *)container class]), property, NSStringFromClass([(NSObject *)existingContainer class])];
+            __unused NSString *error = [NSString stringWithFormat:@"The container (%@) contains dependency (%@) which is already provided by container (%@).", NSStringFromClass([(NSObject *)container class]), property, NSStringFromClass([(NSObject *)existingContainer class])];
             NSAssert(false, error);
         }
         else {
@@ -115,7 +115,7 @@ static DIServiceLocator *sInstance;
         #pragma clang diagnostic pop
         return instance;
     }
-    NSString *error = [NSString stringWithFormat:@"Container which provides dependency for %@ has not been registered.", dependency];
+    __unused NSString *error = [NSString stringWithFormat:@"Container which provides dependency for %@ has not been registered.", dependency];
     NSAssert(false, error);
     return nil;
 }
