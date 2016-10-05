@@ -18,7 +18,7 @@
 
 #import "DIServiceLocator.h"
 
-/** (Optional) Convenience macro which creates a property that will be injected with the required memory accessors. Note: If you not define the property you will not get auto-complete in Xcode. */
+/** (Optional) Convenience macro which creates a property that will be injected with the required memory accessors. Note: If you do not define the property you will not get auto-complete in Xcode. */
 #define di_property(PROPERTY_TYPE, PROPERTY_NAME) \
 @property (nonatomic, strong, readonly) PROPERTY_TYPE *PROPERTY_NAME;
 
