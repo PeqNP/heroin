@@ -8,6 +8,16 @@ import Foundation
 
 private let di = DIServiceLocator()
 
+private func get_property_name<T>(_ property: T.Type) -> String {
+    let className = String(describing: property.self)
+    var chars = Array(className.characters)
+    let firstLetter = String(chars[0]).lowercased()
+    let firstLetterChars = Array(firstLetter.characters)
+    chars[0] = firstLetterChars[0]
+    let propertyName = String(chars)
+    return propertyName
+}
+
 /**
  Register a container with the DI service.
  
@@ -30,50 +40,35 @@ public func di_register(container: DIContainer) {
 /**
  Inject a dependency given the class type.
 
- This is used when the name of the property is the same name as the class with the first letter is lowercase:
+ When there is only a single instance of a given class, it is expected to name the variable the same as the class but with the first letter lowercased. For instance, the property name for the instance of 'MetricsService' will be 'metricsService'. This is provided as a convience.
  ```
  public let metricsService: MetricsService
  ```
  
- When the name of the property deviates from the name of the class you would use the di_inject(name:) method.
- 
- - parameter property: The class of the dependency to inject.
- - returns: The instance of the dependency. The app will crash if the dependency is not found.
- */
-public func di_inject(_ property: AnyClass) -> Any {
-    let className = String(describing: property)
-    var chars = Array(className.characters)
-    let firstLetter = String(chars[0]).lowercased()
-    let firstLetterChars = Array(firstLetter.characters)
-    chars[0] = firstLetterChars[0]
-    let propertyName = String(chars)
-    return di.inject(propertyName)
-}
-
-/**
- Inject a dependency given the class's property name.
- 
- When the name of the property does not follow the convention, where the property name of the dependency is the same name as the class but with a lowercase first letter, you will use this method.
- 
- This is necessary when you have two different instances of the same class. A common use is when defining an instance of an HTTP builder, where one is a builder for non-secure URLs using 'http' and another for secure URLS using 'https':
+ When the name of the property deviates from the name of the class you would then provide the 'name' of the public property which references the instance of the class. Below is an example where there are two instance of the `HTTPService` object. One is for HTTP, which uses the naming convention of having the first letter lowercase, and the other for HTTPS, which adds an 's' at the end of 'http'.
  ```
  public let httpService: HTTPService // Use di_inject(property: AnyClass) for this property
  public let httpsService: HTTPService // Use di_inject(name: String) for this property
  ```
  
- Here is an example of how you would inject both of these dependencies:
+ This is how you would inject both of these dependencies:
  ```
  class MyClass {
     private let httpService = di_inject(HTTPService.self)
-    private let httpsService = di_Inject("httpsService")
+    private let httpsService = di_inject(HTTPService.self, name: "httpsService")
  }
  ```
  
- - parameter name: The name of the property assocaited to the dependency.
+ - parameter property: The class of the dependency to inject.
+ - parameter name: (optional) The name of the property associated to the dependency.
  - returns: The instance of the dependency. The app will crash if the dependency is not found.
  */
-public func di_inject(_ name: String) -> Any {
-    return di.inject(name)
+public func di_inject<T>(_ type: T.Type, name: String? = nil) -> T {
+    if let propertyName = name {
+        return di.inject(propertyName) as! T
+    }
+    let propertyName = get_property_name(type)
+    return di.inject(propertyName) as! T
 }
 
 /**
@@ -88,16 +83,17 @@ public func di_clear() {
  Associate a class dependency with a value. This should only be used in test.
 
  */
-public func di_stub(class: AnyClass, value: Any) {
-
+public func di_stub<T>(type: T.Type, value: Any) {
+    let name = get_property_name(type)
+    di.stub(property: name, value: value)
 }
 
 /**
  Associate a name of a dependency with corresponding value. This should only be used in test.
  
  */
-public func di_stub(name: AnyClass, value: Any) {
-
+public func di_stub(name: String, value: Any) {
+    di.stub(property: name, value: value)
 }
 
 public protocol DIContainer {
