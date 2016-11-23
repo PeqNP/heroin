@@ -14,7 +14,6 @@ class sample_appTests: XCTestCase {
     
     func testExample() {
         di_stub(type: MetricsService.self, value: MetricsService())
-        let controller = ViewController()
-        controller.viewDidLoad()
+        _ = MyClass()
     }
 }
